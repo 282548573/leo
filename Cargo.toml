@@ -28,7 +28,7 @@ path = "leo/main.rs"
 [workspace]
 members = [
 #  "asg",
-#  "asg-passes",
+  "asg-passes",
   "ast",
 #  "ast-passes",
   "compiler",
@@ -75,12 +75,13 @@ version = "1.5.3"
 path = "./parser"
 version = "1.5.3"
 
+
+[dependencies.leo-span]
+path = "./span"
+version = "1.5.3"
+
 #[dependencies.leo-state]
 #path = "./state"
-#version = "1.5.3"
-
-#[dependencies.leo-stdlib]
-#path = "./stdlib"
 #version = "1.5.3"
 
 #[dependencies.snarkvm-algorithms]

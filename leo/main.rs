@@ -29,6 +29,7 @@ use commands::{
     // Deploy, Init, Lint, New, Prove, Run, Setup, Test, Update, Watch,
 };
 use leo_errors::Result;
+use leo_span::symbol::create_session_if_not_set_then;
 use snarkvm_utilities::Write;
 
 use std::{path::PathBuf, process::exit};
@@ -199,28 +200,32 @@ fn run_with_args(opt: Opt) -> Result<()> {
         None => context::get_context(opt.api),
     });
 
-    match opt.command {
-        // CommandOpts::Init { command } => command.try_execute(context),
-        // CommandOpts::New { command } => command.try_execute(context),
-        CommandOpts::Build { command } => command.try_execute(context),
-        // CommandOpts::Setup { command } => command.try_execute(context),
-        // CommandOpts::Prove { command } => command.try_execute(context),
-        // CommandOpts::Test { command } => command.try_execute(context),
-        // CommandOpts::Run { command } => command.try_execute(context),
-        // CommandOpts::Clean { command } => command.try_execute(context),
-        // CommandOpts::Watch { command } => command.try_execute(context),
-        // CommandOpts::Update { command } => command.try_execute(context),
-        //
-        // // CommandOpts::Add { command } => command.try_execute(context),
-        // CommandOpts::Fetch { command } => command.try_execute(context),
-        // CommandOpts::Clone { command } => command.try_execute(context),
-        // CommandOpts::Login { command } => command.try_execute(context),
-        // CommandOpts::Logout { command } => command.try_execute(context),
-        // CommandOpts::Publish { command } => command.try_execute(context),
-        // // CommandOpts::Remove { command } => command.try_execute(context),
-        // CommandOpts::Lint { command } => command.try_execute(context),
-        // CommandOpts::Deploy { command } => command.try_execute(context),
-    }
+    create_session_if_not_set_then(|_| {
+        match opt.command {
+            // CommandOpts::Init { command } => command.try_execute(context),
+            // CommandOpts::New { command } => command.try_execute(context),
+            CommandOpts::Build { command } => command.try_execute(context),
+            // CommandOpts::Setup { command } => command.try_execute(context),
+            // CommandOpts::Prove { command } => command.try_execute(context),
+            // CommandOpts::Test { command } => command.try_execute(context),
+            // CommandOpts::Run { command } => command.try_execute(context),
+            // CommandOpts::Clean { command } => command.try_execute(context),
+            // CommandOpts::Watch { command } => command.try_execute(context),
+            // CommandOpts::Update { command } => command.try_execute(context),
+            //
+            // // CommandOpts::Add { command } => command.try_execute(context),
+            // CommandOpts::Fetch { command } => command.try_execute(context),
+            // CommandOpts::Clone { command } => command.try_execute(context),
+            // CommandOpts::Login { command } => command.try_execute(context),
+            // CommandOpts::Logout { command } => command.try_execute(context),
+            // CommandOpts::Publish { command } => command.try_execute(context),
+            // // CommandOpts::Remove { command } => command.try_execute(context),
+            // CommandOpts::Lint { command } => command.try_execute(context),
+            // CommandOpts::Deploy { command } => command.try_execute(context),
+        }
+    })
+
+    
 }
 
 fn handle_error<T>(res: Result<T>) -> T {

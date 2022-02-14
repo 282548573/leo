@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021 Aleo Systems Inc.
+// Copyright (C) 2019-2022 Aleo Systems Inc.
 // This file is part of the Leo library.
 
 // The Leo library is free software: you can redistribute it and/or modify
@@ -17,40 +17,60 @@
 use crate::resolver::*;
 
 use leo_ast::*;
-use leo_errors::{AstError, Result, Span};
+use leo_errors::emitter::Handler;
+use leo_errors::{AstError, Result};
+use leo_span::{Span, Symbol};
 
 use indexmap::IndexMap;
 
-pub struct Importer {}
+pub struct Importer<'a, T> {
+    resolver: &'a mut T,
+    curve: &'a str,
+    handler: &'a Handler,
+}
 
-impl Importer {
-    pub fn do_pass<T>(program: Program, importer: &mut T) -> Result<Ast>
+impl<'a, T> Importer<'a, T> {
+    pub fn new(resolver: &'a mut T, curve: &'a str, handler: &'a Handler) -> Self
     where
         T: ImportResolver,
     {
-        let mut ast = program.clone();
-        ast.imports.extend(leo_stdlib::resolve_prelude_modules()?);
+        Self {
+            resolver,
+            curve,
+            handler,
+        }
+    }
+}
 
-        let mut imported_symbols: Vec<(Vec<String>, ImportSymbol, Span)> = vec![];
-        for import_statement in program.import_statements.iter() {
-            resolve_import_package(&mut imported_symbols, vec![], &import_statement.package_or_packages);
+impl<'a, T> AstPass for Importer<'a, T>
+where
+    T: ImportResolver,
+{
+    fn do_pass(self, ast: Program) -> Result<Ast> {
+        let mut ast = ast;
+        ast.imports.extend(leo_stdlib::resolve_prelude_modules(self.handler)?);
+
+        let mut imported_symbols: Vec<(Vec<Symbol>, ImportSymbol, Span)> = vec![];
+        for import_statement in ast.import_statements.iter() {
+            // resolve_import_package(&mut imported_symbols, vec![], &import_statement.tree);
         }
 
-        let mut deduplicated_imports: IndexMap<Vec<String>, Span> = IndexMap::new();
+        let mut deduplicated_imports: IndexMap<Vec<Symbol>, Span> = IndexMap::new();
         for (package, _symbol, span) in imported_symbols.iter() {
             deduplicated_imports.insert(package.clone(), span.clone());
         }
 
-        let mut wrapped_resolver = CoreImportResolver::new(importer);
+        let mut wrapped_resolver = CoreImportResolver::new(self.resolver, self.curve);
 
-        let mut resolved_packages: IndexMap<Vec<String>, Program> = IndexMap::new();
+        let mut resolved_packages: IndexMap<Vec<Symbol>, Program> = IndexMap::new();
         for (package, span) in deduplicated_imports {
-            let pretty_package = package.join(".");
-
             let resolved_package =
-                match wrapped_resolver.resolve_package(&package.iter().map(|x| &**x).collect::<Vec<_>>()[..], &span)? {
+                match wrapped_resolver.resolve_package(&package.iter().copied().collect::<Vec<_>>()[..], &span)? {
                     Some(x) => x,
-                    None => return Err(AstError::unresolved_import(pretty_package, &span).into()),
+                    None => {
+                        let package = package.iter().map(|x| x.as_str().to_string()).collect::<Vec<_>>();
+                        return Err(AstError::unresolved_import(package.join("."), &span).into());
+                    }
                 };
 
             resolved_packages.insert(package.clone(), resolved_package);
@@ -75,28 +95,34 @@ enum ImportSymbol {
     All,
 }
 
-fn resolve_import_package(
-    output: &mut Vec<(Vec<String>, ImportSymbol, Span)>,
-    mut package_segments: Vec<String>,
-    package_or_packages: &PackageOrPackages,
+/* fn resolve_import_package(
+    output: &mut Vec<(Vec<Symbol>, ImportSymbol, Span)>,
+    mut package_segments: Vec<Symbol>,
+    import: &ImportTree,
 ) {
-    match package_or_packages {
-        PackageOrPackages::Package(package) => {
-            package_segments.push(package.name.name.to_string());
-            resolve_import_package_access(output, package_segments, &package.access);
+    package_segments.extend(import.base.iter().map(|ident| ident.name));
+    match &import.kind {
+        ImportTreeKind::Glob { span} => {
+            let symbols = import.base.iter().map(|ident| ident.name).collect::<Vec<_>>();
+            output.push((symbols, ImportSymbol::All, span.clone()));
         }
-        PackageOrPackages::Packages(packages) => {
-            package_segments.push(packages.name.name.to_string());
-            for access in packages.accesses.clone() {
-                resolve_import_package_access(output, package_segments.clone(), &access);
+        ImportTreeKind::Leaf{ alias: None }  => {
+            
+        },
+        ImportTreeKind::Leaf{ alias: Some(alias)} => {
+            
+        }
+        ImportTreeKind::Nested { tree } => {
+            for node in tree.iter() {
+                resolve_import_package(output, package_segments, &node);
             }
         }
     }
 }
-
-fn resolve_import_package_access(
-    output: &mut Vec<(Vec<String>, ImportSymbol, Span)>,
-    mut package_segments: Vec<String>,
+ */
+/* fn resolve_import_package_access(
+    output: &mut Vec<(Vec<Symbol>, ImportSymbol, Span)>,
+    mut package_segments: Vec<Symbol>,
     package: &PackageAccess,
 ) {
     match package {
@@ -120,10 +146,10 @@ fn resolve_import_package_access(
             output.push((package_segments, symbol, span));
         }
         PackageAccess::Multiple(packages) => {
-            package_segments.push(packages.name.name.to_string());
+            package_segments.push(packages.name.name);
             for subaccess in packages.accesses.iter() {
                 resolve_import_package_access(output, package_segments.clone(), subaccess);
             }
         }
     }
-}
+} */

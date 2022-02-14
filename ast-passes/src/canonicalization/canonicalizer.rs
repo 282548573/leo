@@ -15,7 +15,7 @@
 // along with the Leo library. If not, see <https://www.gnu.org/licenses/>.
 
 use leo_ast::*;
-use leo_errors::{AstError, Result, Span};
+// use leo_errors::{AstError, Result, Span};
 
 /// Replace Self when it is in a enclosing circuit type.
 /// Error when Self is outside an enclosing circuit type.
@@ -29,7 +29,7 @@ pub struct Canonicalizer {
     circuit_name: Option<Identifier>,
     in_circuit: bool,
 }
-
+/* 
 impl AstPass for Canonicalizer {
     fn do_pass(ast: Program) -> Result<Ast> {
         Ok(Ast::new(
@@ -730,3 +730,4 @@ impl ReconstructingReducer for Canonicalizer {
         Ok(circ)
     }
 }
+ */

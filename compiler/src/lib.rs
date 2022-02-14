@@ -22,6 +22,7 @@
 #![allow(clippy::upper_case_acronyms)]
 #![doc = include_str!("../README.md")]
 
+use indexmap::IndexMap;
 use leo_errors::emitter::Handler;
 use leo_errors::{CompilerError, Result};
 
@@ -33,6 +34,7 @@ use std::path::PathBuf;
 pub struct Compiler<'a> {
     handler: &'a Handler,
     main_file_path: PathBuf,
+    imports_map: IndexMap<String, String>,
 }
 
 impl<'a> Compiler<'a> {
@@ -43,6 +45,7 @@ impl<'a> Compiler<'a> {
         Self {
             handler,
             main_file_path,
+            imports_map: IndexMap::new(),
         }
     }
 
@@ -76,6 +79,21 @@ impl<'a> Compiler<'a> {
             self.main_file_path.to_str().unwrap_or_default(),
             program_string,
         )?;
+
+        let mut outputs = self.main_file_path.clone();
+        outputs.pop();
+        outputs.pop();
+        outputs.push("outputs");
+        ast.to_json_file_without_keys(outputs, "initial_ast.json", &["span"])?;
+
+        /* ast = leo_ast_passes::Importer::do_pass(
+            leo_ast_passes::Importer::new(
+                &mut ImportParser::new(self.handler, self.main_file_path.clone(), self.imports_map.clone()),
+                "bls12_377",
+                self.handler,
+            ),
+            ast.into_repr(),
+        )?; */
 
         Ok(ast)
     }
