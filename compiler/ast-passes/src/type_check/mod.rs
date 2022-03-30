@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021 Aleo Systems Inc.
+// Copyright (C) 2019-2022 Aleo Systems Inc.
 // This file is part of the Leo library.
 
 // The Leo library is free software: you can redistribute it and/or modify
@@ -14,15 +14,19 @@
 // You should have received a copy of the GNU General Public License
 // along with the Leo library. If not, see <https://www.gnu.org/licenses/>.
 
-#![doc = include_str!("../README.md")]
+pub mod type_checker;
+use indexmap::IndexMap;
+pub use type_checker::*;
 
-pub mod canonicalization;
-pub use canonicalization::*;
+use leo_ast::{AstPass, Program};
+use leo_errors::Result;
+use leo_tabi::SymbolTable;
 
-// Temporarily disable import resolution
-// until we migrate stdlib and then import resolution.
-/* pub mod import_resolution;
-pub use import_resolution::*; */
+impl AstPass for TypeChecker {
+    type Output = SymbolTable;
 
-pub mod type_check;
-pub use type_check::*;
+    fn do_pass(self, _ast: Program) -> Result<Self::Output> {
+        let functions = IndexMap::new();
+        Ok(SymbolTable { functions })
+    }
+}

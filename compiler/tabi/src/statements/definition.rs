@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021 Aleo Systems Inc.
+// Copyright (C) 2019-2022 Aleo Systems Inc.
 // This file is part of the Leo library.
 
 // The Leo library is free software: you can redistribute it and/or modify
@@ -14,15 +14,12 @@
 // You should have received a copy of the GNU General Public License
 // along with the Leo library. If not, see <https://www.gnu.org/licenses/>.
 
-#![doc = include_str!("../README.md")]
+use super::{ExpressionSymbol, Span, Type, ID};
 
-pub mod canonicalization;
-pub use canonicalization::*;
-
-// Temporarily disable import resolution
-// until we migrate stdlib and then import resolution.
-/* pub mod import_resolution;
-pub use import_resolution::*; */
-
-pub mod type_check;
-pub use type_check::*;
+pub struct DefinitionSymbol {
+    pub const_: bool,
+    pub type_: Type,
+    pub var: ID,
+    pub value: ExpressionSymbol,
+    pub span: Span,
+}

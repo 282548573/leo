@@ -39,5 +39,3 @@ pub use self_keyword::*;
 
 pub mod spread_or_expression;
 pub use spread_or_expression::*;
-
-pub mod vec_tendril_json;

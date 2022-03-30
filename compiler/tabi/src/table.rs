@@ -14,21 +14,10 @@
 // You should have received a copy of the GNU General Public License
 // along with the Leo library. If not, see <https://www.gnu.org/licenses/>.
 
-use serde::{Deserialize, Deserializer, Serialize, Serializer};
-use tendril::StrTendril;
+use indexmap::IndexMap;
 
-#[allow(clippy::ptr_arg)]
-pub fn serialize<S: Serializer>(tendril: &Vec<StrTendril>, serializer: S) -> Result<S::Ok, S::Error> {
-    tendril
-        .iter()
-        .map(|x| x.as_ref())
-        .collect::<Vec<_>>()
-        .serialize(serializer)
-}
+use super::{FunctionSymbol, ID};
 
-pub fn deserialize<'de, D: Deserializer<'de>>(deserializer: D) -> Result<Vec<StrTendril>, D::Error> {
-    Ok(Vec::<String>::deserialize(deserializer)?
-        .into_iter()
-        .map(|x| x.into())
-        .collect())
+pub struct SymbolTable {
+    pub functions: IndexMap<ID, FunctionSymbol>,
 }

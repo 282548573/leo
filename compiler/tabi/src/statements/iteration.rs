@@ -14,17 +14,14 @@
 // You should have received a copy of the GNU General Public License
 // along with the Leo library. If not, see <https://www.gnu.org/licenses/>.
 
-//! Provides logic for serializing and deserializing the `StrTendril` type.
+use super::{BlockSymbol, ExpressionSymbol, Span, Type, ID};
 
-use serde::{Deserialize, Deserializer, Serializer};
-use tendril::StrTendril;
-
-/// Serialization for the StrTendril type.
-pub fn serialize<S: Serializer>(tendril: &StrTendril, serializer: S) -> Result<S::Ok, S::Error> {
-    serializer.serialize_str(tendril)
-}
-
-/// Deserialization for the StrTendril type.
-pub fn deserialize<'de, D: Deserializer<'de>>(deserializer: D) -> Result<StrTendril, D::Error> {
-    Ok(String::deserialize(deserializer)?.into())
+pub struct IterationSymbol {
+    pub var: ID,
+    pub start: ExpressionSymbol,
+    pub stop: ExpressionSymbol,
+    pub inclusive: bool,
+    pub block: BlockSymbol,
+    pub span: Span,
+    pub type_: Type,
 }

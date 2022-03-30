@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021 Aleo Systems Inc.
+// Copyright (C) 2019-2022 Aleo Systems Inc.
 // This file is part of the Leo library.
 
 // The Leo library is free software: you can redistribute it and/or modify
@@ -14,15 +14,25 @@
 // You should have received a copy of the GNU General Public License
 // along with the Leo library. If not, see <https://www.gnu.org/licenses/>.
 
-#![doc = include_str!("../README.md")]
+use indexmap::IndexMap;
 
-pub mod canonicalization;
-pub use canonicalization::*;
+use super::{Span, StatementSymbol, Type, ID};
 
-// Temporarily disable import resolution
-// until we migrate stdlib and then import resolution.
-/* pub mod import_resolution;
-pub use import_resolution::*; */
+pub struct FunctionSymbol {
+    pub id: ID,
+    pub signature: FunctionSignature,
+    pub statements: Vec<StatementSymbol>,
+    pub span: Span,
+}
 
-pub mod type_check;
-pub use type_check::*;
+pub struct FunctionSignature {
+    pub const_: bool,
+    pub inputs: IndexMap<ID, FunctionInput>,
+    pub outputs: Vec<Type>,
+}
+
+pub struct FunctionInput {
+    pub const_: bool,
+    pub id: ID,
+    pub type_: Type,
+}

@@ -673,16 +673,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3dcaa9ae7725d12cdb85b3ad99a434db70b468c09ded17e012d86b5c1010f7a7"
 
 [[package]]
-name = "futf"
-version = "0.1.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7c9c1ce3fa9336301af935ab852c437817d14cd33690446569392e65170aac3b"
-dependencies = [
- "mac",
- "new_debug_unreachable",
-]
-
-[[package]]
 name = "futures-channel"
 version = "0.3.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1079,7 +1069,6 @@ dependencies = [
  "serde",
  "serde_json",
  "smallvec",
- "tendril",
 ]
 
 [[package]]
@@ -1091,6 +1080,7 @@ dependencies = [
  "leo-errors",
  "leo-parser",
  "leo-span",
+ "leo-tabi",
 ]
 
 [[package]]
@@ -1116,7 +1106,6 @@ dependencies = [
  "eyre",
  "leo-span",
  "serde",
- "tendril",
  "thiserror",
 ]
 
@@ -1183,7 +1172,6 @@ dependencies = [
  "serde_yaml",
  "smallvec",
  "structopt",
- "tendril",
  "tracing",
 ]
 
@@ -1195,7 +1183,16 @@ dependencies = [
  "indexmap",
  "scoped-tls",
  "serde",
- "tendril",
+]
+
+[[package]]
+name = "leo-tabi"
+version = "1.5.3"
+dependencies = [
+ "indexmap",
+ "leo-ast",
+ "leo-errors",
+ "leo-span",
 ]
 
 [[package]]
@@ -1230,12 +1227,6 @@ checksum = "51b9bbe6c47d51fc3e1a9b945965946b4c44142ab8792c50835a980d362c2710"
 dependencies = [
  "cfg-if 1.0.0",
 ]
-
-[[package]]
-name = "mac"
-version = "0.1.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c41e0c4fef86961ac6d6f8a82609f55f31b05e4fce149ac5710e439df7619ba4"
 
 [[package]]
 name = "matches"
@@ -1383,12 +1374,6 @@ dependencies = [
  "libc",
  "winapi 0.3.9",
 ]
-
-[[package]]
-name = "new_debug_unreachable"
-version = "1.0.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e4a24736216ec316047a1fc4252e27dabb04218aa4a3f37c6e7ddbf1f9782b54"
 
 [[package]]
 name = "nias"
@@ -2275,17 +2260,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "tendril"
-version = "0.4.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a9ef557cb397a4f0a5a3a628f06515f78563f2209e64d47055d9dc6052bf5e33"
-dependencies = [
- "futf",
- "mac",
- "utf-8",
-]
-
-[[package]]
 name = "termcolor"
 version = "1.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2599,12 +2573,6 @@ dependencies = [
  "matches",
  "percent-encoding",
 ]
-
-[[package]]
-name = "utf-8"
-version = "0.7.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "09cc8ee72d2a9becf2f2febe0205bbed8fc6615b7cb429ad062dc7b7ddd036a9"
 
 [[package]]
 name = "valuable"

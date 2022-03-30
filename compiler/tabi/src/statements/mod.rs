@@ -14,20 +14,41 @@
 // You should have received a copy of the GNU General Public License
 // along with the Leo library. If not, see <https://www.gnu.org/licenses/>.
 
-//! Implements the AstPass trait for the Canonicalizer
-//! which is a ReconstructingReducer trait to canonicalize AST nodes.
-//! This allows for easy calling of the Canonicalization pass.
+use super::ExpressionSymbol;
+use leo_ast::{Identifier as ID, Type};
+use leo_span::Span;
 
-pub mod canonicalizer;
-pub use canonicalizer::*;
+mod assign;
+pub use assign::*;
 
-use leo_ast::{Ast, AstPass, Program, ReconstructingDirector};
-use leo_errors::Result;
+mod block;
+pub use block::*;
 
-impl AstPass for Canonicalizer {
-    type Output = Ast;
+mod conditional;
+pub use conditional::*;
 
-    fn do_pass(self, ast: Program) -> Result<Self::Output> {
-        Ok(Ast::new(ReconstructingDirector::new(self).reduce_program(&ast)?))
-    }
+mod console;
+pub use console::*;
+
+mod definition;
+pub use definition::*;
+
+mod expression;
+pub use expression::*;
+
+mod iteration;
+pub use iteration::*;
+
+mod return_sym;
+pub use return_sym::*;
+
+pub enum StatementSymbol {
+    Assign(AssignSymbol),
+    Block(BlockSymbol),
+    Conditional(AssignSymbol),
+    Console(ConsoleSymbol),
+    Definition(DefinitionSymbol),
+    Expression(ExpressionStatementSymbol),
+    Iteration(IterationSymbol),
+    Return(ReturnSymbol),
 }

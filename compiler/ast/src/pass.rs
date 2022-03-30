@@ -14,10 +14,12 @@
 // You should have received a copy of the GNU General Public License
 // along with the Leo library. If not, see <https://www.gnu.org/licenses/>.
 
-use crate::{Ast, Program};
+use crate::Program;
 use leo_errors::Result;
 
 /// A pass consuming a `Program` and possibly returning an `Ast`.
 pub trait AstPass {
-    fn do_pass(self, ast: Program) -> Result<Ast>;
+    type Output;
+
+    fn do_pass(self, ast: Program) -> Result<Self::Output>;
 }

@@ -23,8 +23,8 @@ use serde::{Deserialize, Serialize};
 use std::{fmt, iter::Peekable};
 
 ///
-/// Returns a new `StrTendril` string if an identifier can be eaten, otherwise returns [`None`].
-/// An identifier can be eaten if its bytes are at the front of the given `input_tendril` string.
+/// Returns a new `String` if an identifier can be eaten, otherwise returns [`None`].
+/// An identifier can be eaten if its bytes are at the front of the given `String`.
 ///
 fn eat_identifier(input: &mut Peekable<impl Iterator<Item = char>>) -> Option<String> {
     match input.peek() {
