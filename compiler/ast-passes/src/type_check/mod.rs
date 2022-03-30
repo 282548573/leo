@@ -15,7 +15,6 @@
 // along with the Leo library. If not, see <https://www.gnu.org/licenses/>.
 
 pub mod type_checker;
-use indexmap::IndexMap;
 pub use type_checker::*;
 
 use leo_ast::{AstPass, Program};
@@ -25,8 +24,9 @@ use leo_tabi::SymbolTable;
 impl AstPass for TypeChecker {
     type Output = SymbolTable;
 
-    fn do_pass(self, _ast: Program) -> Result<Self::Output> {
-        let functions = IndexMap::new();
-        Ok(SymbolTable { functions })
+    fn do_pass(self, ast: Program) -> Result<Self::Output> {
+        let type_checker = Self::forward_declarations(&ast.functions);
+
+        type_checker.construct_symbol_table(ast)
     }
 }

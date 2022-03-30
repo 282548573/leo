@@ -14,4 +14,10 @@
 // You should have received a copy of the GNU General Public License
 // along with the Leo library. If not, see <https://www.gnu.org/licenses/>.
 
-pub struct VariableSymbol;
+use super::{ExpressionSymbol, Type, ID};
+
+pub struct VariableSymbol {
+    pub id: ID,
+    pub type_: Type,
+    pub value: ExpressionSymbol,
+}

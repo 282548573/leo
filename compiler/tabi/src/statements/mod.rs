@@ -15,8 +15,8 @@
 // along with the Leo library. If not, see <https://www.gnu.org/licenses/>.
 
 use super::ExpressionSymbol;
-use leo_ast::{Identifier as ID, Type};
-use leo_span::Span;
+use leo_ast::Type;
+use leo_span::{Span, Symbol as ID};
 
 mod assign;
 pub use assign::*;

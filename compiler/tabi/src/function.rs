@@ -16,22 +16,25 @@
 
 use indexmap::IndexMap;
 
+use crate::{BlockSymbol, VariableSymbol};
+
 use super::{Span, StatementSymbol, Type, ID};
 
 pub struct FunctionSymbol {
     pub id: ID,
     pub signature: FunctionSignature,
-    pub statements: Vec<StatementSymbol>,
+    pub statements: BlockSymbol,
     pub span: Span,
+    pub vars: IndexMap<ID, VariableSymbol>,
 }
 
 pub struct FunctionSignature {
     pub const_: bool,
-    pub inputs: IndexMap<ID, FunctionInput>,
-    pub outputs: Vec<Type>,
+    pub inputs: IndexMap<ID, FunctionInputSymbol>,
+    pub outputs: Type,
 }
 
-pub struct FunctionInput {
+pub struct FunctionInputSymbol {
     pub const_: bool,
     pub id: ID,
     pub type_: Type,

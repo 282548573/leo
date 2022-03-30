@@ -14,8 +14,8 @@
 // You should have received a copy of the GNU General Public License
 // along with the Leo library. If not, see <https://www.gnu.org/licenses/>.
 
-use leo_ast::{Identifier as ID, Type};
-use leo_span::Span;
+use leo_ast::Type;
+use leo_span::{Span, Symbol as ID};
 
 mod expressions;
 pub use expressions::*;
@@ -25,9 +25,6 @@ pub use function::*;
 
 mod statements;
 pub use statements::*;
-
-mod symbol;
-pub use symbol::*;
 
 mod table;
 pub use table::*;
