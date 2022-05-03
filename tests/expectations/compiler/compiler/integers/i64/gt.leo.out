@@ -3,4 +3,4 @@ namespace: Compile
 expectation: Pass
 outputs:
   - output: []
-    initial_ast: 3c6a6a8e102fd584ce5ec3e7bb33a944d13f7d2940b9f7dd62ccffd4497b1858
+    initial_ast: dd1e1b491c419eef11ebcac1606cca1b89763127edc47429b2a3c3dbe725a447

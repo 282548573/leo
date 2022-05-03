@@ -5,12 +5,8 @@ outputs:
   - Block:
       statements: []
       span:
-        line_start: 1
-        line_stop: 1
-        col_start: 1
-        col_stop: 3
-        path: ""
-        content: "{}"
+        lo: 0
+        hi: 2
   - Block:
       statements:
         - Return:
@@ -19,44 +15,24 @@ outputs:
                 Implicit:
                   - "0"
                   - span:
-                      line_start: 2
-                      line_stop: 2
-                      col_start: 8
-                      col_stop: 9
-                      path: ""
-                      content: return 0;
+                      lo: 9
+                      hi: 10
             span:
-              line_start: 2
-              line_stop: 2
-              col_start: 1
-              col_stop: 9
-              path: ""
-              content: return 0;
+              lo: 2
+              hi: 10
       span:
-        line_start: 1
-        line_stop: 3
-        col_start: 1
-        col_stop: 2
-        path: ""
-        content: "{\n     ...\n}"
+        lo: 0
+        hi: 13
   - Block:
       statements:
         - Block:
             statements: []
             span:
-              line_start: 1
-              line_stop: 1
-              col_start: 2
-              col_stop: 4
-              path: ""
-              content: "{{}}"
+              lo: 1
+              hi: 3
       span:
-        line_start: 1
-        line_stop: 1
-        col_start: 1
-        col_stop: 5
-        path: ""
-        content: "{{}}"
+        lo: 0
+        hi: 4
   - Block:
       statements:
         - Block:
@@ -67,38 +43,22 @@ outputs:
                       Implicit:
                         - "0"
                         - span:
-                            line_start: 3
-                            line_stop: 3
-                            col_start: 8
-                            col_stop: 9
-                            path: ""
-                            content: return 0;
+                            lo: 11
+                            hi: 12
                   span:
-                    line_start: 3
-                    line_stop: 3
-                    col_start: 1
-                    col_stop: 9
-                    path: ""
-                    content: return 0;
+                    lo: 4
+                    hi: 12
             span:
-              line_start: 2
-              line_stop: 4
-              col_start: 1
-              col_stop: 2
-              path: ""
-              content: "{\n     ...\n}"
+              lo: 2
+              hi: 15
       span:
-        line_start: 1
-        line_stop: 5
-        col_start: 1
-        col_stop: 2
-        path: ""
-        content: "{\n     ...\n     ...\n     ...\n}"
+        lo: 0
+        hi: 17
   - Block:
       statements:
         - Conditional:
             condition:
-              Identifier: "{\"name\":\"x\",\"span\":\"{\\\"line_start\\\":2,\\\"line_stop\\\":2,\\\"col_start\\\":4,\\\"col_stop\\\":5,\\\"path\\\":\\\"\\\",\\\"content\\\":\\\"if x {\\\"}\"}"
+              Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":5,\\\"hi\\\":6}\"}"
             block:
               statements:
                 - Return:
@@ -107,38 +67,18 @@ outputs:
                         Implicit:
                           - "0"
                           - span:
-                              line_start: 3
-                              line_stop: 3
-                              col_start: 8
-                              col_stop: 9
-                              path: ""
-                              content: return 0;
+                              lo: 16
+                              hi: 17
                     span:
-                      line_start: 3
-                      line_stop: 3
-                      col_start: 1
-                      col_stop: 9
-                      path: ""
-                      content: return 0;
+                      lo: 9
+                      hi: 17
               span:
-                line_start: 2
-                line_stop: 4
-                col_start: 6
-                col_stop: 2
-                path: ""
-                content: "if x {\n     ...\n}"
+                lo: 7
+                hi: 20
             next: ~
             span:
-              line_start: 2
-              line_stop: 4
-              col_start: 1
-              col_stop: 2
-              path: ""
-              content: "if x {\n     ...\n}"
+              lo: 2
+              hi: 20
       span:
-        line_start: 1
-        line_stop: 5
-        col_start: 1
-        col_stop: 2
-        path: ""
-        content: "{\n     ...\n     ...\n     ...\n}"
+        lo: 0
+        hi: 22

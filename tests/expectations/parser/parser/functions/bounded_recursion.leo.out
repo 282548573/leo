@@ -5,21 +5,17 @@ outputs:
   - name: ""
     expected_input: []
     functions:
-      "{\"name\":\"x\",\"span\":\"{\\\"line_start\\\":3,\\\"line_stop\\\":3,\\\"col_start\\\":10,\\\"col_stop\\\":11,\\\"path\\\":\\\"\\\",\\\"content\\\":\\\"function x(constant y: u32) {\\\"}\"}":
-        identifier: "{\"name\":\"x\",\"span\":\"{\\\"line_start\\\":3,\\\"line_stop\\\":3,\\\"col_start\\\":10,\\\"col_stop\\\":11,\\\"path\\\":\\\"\\\",\\\"content\\\":\\\"function x(constant y: u32) {\\\"}\"}"
+      "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":11,\\\"hi\\\":12}\"}":
+        identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":11,\\\"hi\\\":12}\"}"
         input:
           - Variable:
-              identifier: "{\"name\":\"y\",\"span\":\"{\\\"line_start\\\":3,\\\"line_stop\\\":3,\\\"col_start\\\":21,\\\"col_stop\\\":22,\\\"path\\\":\\\"\\\",\\\"content\\\":\\\"function x(constant y: u32) {\\\"}\"}"
+              identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":22,\\\"hi\\\":23}\"}"
               mode: Constant
               type_:
                 IntegerType: U32
               span:
-                line_start: 3
-                line_stop: 3
-                col_start: 21
-                col_stop: 22
-                path: ""
-                content: "function x(constant y: u32) {"
+                lo: 22
+                hi: 23
         const_: false
         output: ~
         core_mapping: ~
@@ -29,114 +25,70 @@ outputs:
                 condition:
                   Binary:
                     left:
-                      Identifier: "{\"name\":\"y\",\"span\":\"{\\\"line_start\\\":4,\\\"line_stop\\\":4,\\\"col_start\\\":8,\\\"col_stop\\\":9,\\\"path\\\":\\\"\\\",\\\"content\\\":\\\"    if y < 5u32 {\\\"}\"}"
+                      Identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":39,\\\"hi\\\":40}\"}"
                     right:
                       Value:
                         Integer:
                           - U32
                           - "5"
                           - span:
-                              line_start: 4
-                              line_stop: 4
-                              col_start: 12
-                              col_stop: 16
-                              path: ""
-                              content: "    if y < 5u32 {"
+                              lo: 43
+                              hi: 47
                     op: Lt
                     span:
-                      line_start: 4
-                      line_stop: 4
-                      col_start: 8
-                      col_stop: 16
-                      path: ""
-                      content: "    if y < 5u32 {"
+                      lo: 39
+                      hi: 47
                 block:
                   statements:
                     - Expression:
                         expression:
                           Call:
                             function:
-                              Identifier: "{\"name\":\"x\",\"span\":\"{\\\"line_start\\\":5,\\\"line_stop\\\":5,\\\"col_start\\\":9,\\\"col_stop\\\":10,\\\"path\\\":\\\"\\\",\\\"content\\\":\\\"        x(y+1);\\\"}\"}"
+                              Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":58,\\\"hi\\\":59}\"}"
                             arguments:
                               - Binary:
                                   left:
-                                    Identifier: "{\"name\":\"y\",\"span\":\"{\\\"line_start\\\":5,\\\"line_stop\\\":5,\\\"col_start\\\":11,\\\"col_stop\\\":12,\\\"path\\\":\\\"\\\",\\\"content\\\":\\\"        x(y+1);\\\"}\"}"
+                                    Identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":60,\\\"hi\\\":61}\"}"
                                   right:
                                     Value:
                                       Implicit:
                                         - "1"
                                         - span:
-                                            line_start: 5
-                                            line_stop: 5
-                                            col_start: 13
-                                            col_stop: 14
-                                            path: ""
-                                            content: "        x(y+1);"
+                                            lo: 62
+                                            hi: 63
                                   op: Add
                                   span:
-                                    line_start: 5
-                                    line_stop: 5
-                                    col_start: 11
-                                    col_stop: 14
-                                    path: ""
-                                    content: "        x(y+1);"
+                                    lo: 60
+                                    hi: 63
                             span:
-                              line_start: 5
-                              line_stop: 5
-                              col_start: 9
-                              col_stop: 15
-                              path: ""
-                              content: "        x(y+1);"
+                              lo: 58
+                              hi: 64
                         span:
-                          line_start: 5
-                          line_stop: 5
-                          col_start: 9
-                          col_stop: 15
-                          path: ""
-                          content: "        x(y+1);"
+                          lo: 58
+                          hi: 64
                   span:
-                    line_start: 4
-                    line_stop: 6
-                    col_start: 17
-                    col_stop: 6
-                    path: ""
-                    content: "    if y < 5u32 {\n         ...\n    }"
+                    lo: 48
+                    hi: 71
                 next: ~
                 span:
-                  line_start: 4
-                  line_stop: 6
-                  col_start: 5
-                  col_stop: 6
-                  path: ""
-                  content: "    if y < 5u32 {\n         ...\n    }"
+                  lo: 36
+                  hi: 71
           span:
-            line_start: 3
-            line_stop: 7
-            col_start: 29
-            col_stop: 2
-            path: ""
-            content: "function x(constant y: u32) {\n     ...\n     ...\n     ...\n}"
+            lo: 30
+            hi: 73
         span:
-          line_start: 3
-          line_stop: 7
-          col_start: 1
-          col_stop: 2
-          path: ""
-          content: "function x(constant y: u32) {\n     ...\n     ...\n     ...\n}"
-      "{\"name\":\"main\",\"span\":\"{\\\"line_start\\\":9,\\\"line_stop\\\":9,\\\"col_start\\\":10,\\\"col_stop\\\":14,\\\"path\\\":\\\"\\\",\\\"content\\\":\\\"function main(y: bool) -> bool {\\\"}\"}":
-        identifier: "{\"name\":\"main\",\"span\":\"{\\\"line_start\\\":9,\\\"line_stop\\\":9,\\\"col_start\\\":10,\\\"col_stop\\\":14,\\\"path\\\":\\\"\\\",\\\"content\\\":\\\"function main(y: bool) -> bool {\\\"}\"}"
+          lo: 2
+          hi: 73
+      "{\"name\":\"main\",\"span\":\"{\\\"lo\\\":84,\\\"hi\\\":88}\"}":
+        identifier: "{\"name\":\"main\",\"span\":\"{\\\"lo\\\":84,\\\"hi\\\":88}\"}"
         input:
           - Variable:
-              identifier: "{\"name\":\"y\",\"span\":\"{\\\"line_start\\\":9,\\\"line_stop\\\":9,\\\"col_start\\\":15,\\\"col_stop\\\":16,\\\"path\\\":\\\"\\\",\\\"content\\\":\\\"function main(y: bool) -> bool {\\\"}\"}"
+              identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":89,\\\"hi\\\":90}\"}"
               mode: Private
               type_: Boolean
               span:
-                line_start: 9
-                line_stop: 9
-                col_start: 15
-                col_stop: 16
-                path: ""
-                content: "function main(y: bool) -> bool {"
+                lo: 89
+                hi: 90
         const_: false
         output: Boolean
         core_mapping: ~
@@ -146,54 +98,30 @@ outputs:
                 expression:
                   Call:
                     function:
-                      Identifier: "{\"name\":\"x\",\"span\":\"{\\\"line_start\\\":10,\\\"line_stop\\\":10,\\\"col_start\\\":5,\\\"col_stop\\\":6,\\\"path\\\":\\\"\\\",\\\"content\\\":\\\"    x(1u32);\\\"}\"}"
+                      Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":112,\\\"hi\\\":113}\"}"
                     arguments:
                       - Value:
                           Integer:
                             - U32
                             - "1"
                             - span:
-                                line_start: 10
-                                line_stop: 10
-                                col_start: 7
-                                col_stop: 11
-                                path: ""
-                                content: "    x(1u32);"
+                                lo: 114
+                                hi: 118
                     span:
-                      line_start: 10
-                      line_stop: 10
-                      col_start: 5
-                      col_stop: 12
-                      path: ""
-                      content: "    x(1u32);"
+                      lo: 112
+                      hi: 119
                 span:
-                  line_start: 10
-                  line_stop: 10
-                  col_start: 5
-                  col_stop: 12
-                  path: ""
-                  content: "    x(1u32);"
+                  lo: 112
+                  hi: 119
             - Return:
                 expression:
-                  Identifier: "{\"name\":\"y\",\"span\":\"{\\\"line_start\\\":11,\\\"line_stop\\\":11,\\\"col_start\\\":12,\\\"col_stop\\\":13,\\\"path\\\":\\\"\\\",\\\"content\\\":\\\"    return y;\\\"}\"}"
+                  Identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":132,\\\"hi\\\":133}\"}"
                 span:
-                  line_start: 11
-                  line_stop: 11
-                  col_start: 5
-                  col_stop: 13
-                  path: ""
-                  content: "    return y;"
+                  lo: 125
+                  hi: 133
           span:
-            line_start: 9
-            line_stop: 12
-            col_start: 32
-            col_stop: 2
-            path: ""
-            content: "function main(y: bool) -> bool {\n     ...\n     ...\n}"
+            lo: 106
+            hi: 136
         span:
-          line_start: 9
-          line_stop: 12
-          col_start: 1
-          col_stop: 2
-          path: ""
-          content: "function main(y: bool) -> bool {\n     ...\n     ...\n}"
+          lo: 75
+          hi: 136

@@ -5,8 +5,8 @@ outputs:
   - name: ""
     expected_input: []
     functions:
-      "{\"name\":\"x\",\"span\":\"{\\\"line_start\\\":3,\\\"line_stop\\\":3,\\\"col_start\\\":10,\\\"col_stop\\\":11,\\\"path\\\":\\\"\\\",\\\"content\\\":\\\"function x() {}\\\"}\"}":
-        identifier: "{\"name\":\"x\",\"span\":\"{\\\"line_start\\\":3,\\\"line_stop\\\":3,\\\"col_start\\\":10,\\\"col_stop\\\":11,\\\"path\\\":\\\"\\\",\\\"content\\\":\\\"function x() {}\\\"}\"}"
+      "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":11,\\\"hi\\\":12}\"}":
+        identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":11,\\\"hi\\\":12}\"}"
         input: []
         const_: false
         output: ~
@@ -14,16 +14,8 @@ outputs:
         block:
           statements: []
           span:
-            line_start: 3
-            line_stop: 3
-            col_start: 14
-            col_stop: 16
-            path: ""
-            content: "function x() {}"
+            lo: 15
+            hi: 17
         span:
-          line_start: 3
-          line_stop: 3
-          col_start: 1
-          col_stop: 16
-          path: ""
-          content: "function x() {}"
+          lo: 2
+          hi: 17

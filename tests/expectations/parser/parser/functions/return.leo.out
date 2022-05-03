@@ -5,8 +5,8 @@ outputs:
   - name: ""
     expected_input: []
     functions:
-      "{\"name\":\"x\",\"span\":\"{\\\"line_start\\\":3,\\\"line_stop\\\":3,\\\"col_start\\\":10,\\\"col_stop\\\":11,\\\"path\\\":\\\"\\\",\\\"content\\\":\\\"function x() -> u32 {\\\"}\"}":
-        identifier: "{\"name\":\"x\",\"span\":\"{\\\"line_start\\\":3,\\\"line_stop\\\":3,\\\"col_start\\\":10,\\\"col_stop\\\":11,\\\"path\\\":\\\"\\\",\\\"content\\\":\\\"function x() -> u32 {\\\"}\"}"
+      "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":11,\\\"hi\\\":12}\"}":
+        identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":11,\\\"hi\\\":12}\"}"
         input: []
         const_: false
         output:
@@ -20,30 +20,14 @@ outputs:
                     Implicit:
                       - "0"
                       - span:
-                          line_start: 4
-                          line_stop: 4
-                          col_start: 12
-                          col_stop: 13
-                          path: ""
-                          content: "    return 0;"
+                          lo: 35
+                          hi: 36
                 span:
-                  line_start: 4
-                  line_stop: 4
-                  col_start: 5
-                  col_stop: 13
-                  path: ""
-                  content: "    return 0;"
+                  lo: 28
+                  hi: 36
           span:
-            line_start: 3
-            line_stop: 5
-            col_start: 21
-            col_stop: 2
-            path: ""
-            content: "function x() -> u32 {\n     ...\n}"
+            lo: 22
+            hi: 39
         span:
-          line_start: 3
-          line_stop: 5
-          col_start: 1
-          col_stop: 2
-          path: ""
-          content: "function x() -> u32 {\n     ...\n}"
+          lo: 2
+          hi: 39

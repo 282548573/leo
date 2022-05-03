@@ -8,62 +8,38 @@ outputs:
           Implicit:
             - "1"
             - span:
-                line_start: 1
-                line_stop: 1
-                col_start: 1
-                col_stop: 2
-                path: ""
-                content: 1 + 1
+                lo: 0
+                hi: 1
       right:
         Value:
           Implicit:
             - "1"
             - span:
-                line_start: 1
-                line_stop: 1
-                col_start: 5
-                col_stop: 6
-                path: ""
-                content: 1 + 1
+                lo: 4
+                hi: 5
       op: Add
       span:
-        line_start: 1
-        line_stop: 1
-        col_start: 1
-        col_stop: 6
-        path: ""
-        content: 1 + 1
+        lo: 0
+        hi: 5
   - Binary:
       left:
         Value:
           Implicit:
             - "2"
             - span:
-                line_start: 1
-                line_stop: 1
-                col_start: 1
-                col_stop: 2
-                path: ""
-                content: 2+3
+                lo: 0
+                hi: 1
       right:
         Value:
           Implicit:
             - "3"
             - span:
-                line_start: 1
-                line_stop: 1
-                col_start: 3
-                col_stop: 4
-                path: ""
-                content: 2+3
+                lo: 2
+                hi: 3
       op: Add
       span:
-        line_start: 1
-        line_stop: 1
-        col_start: 1
-        col_stop: 4
-        path: ""
-        content: 2+3
+        lo: 0
+        hi: 3
   - Binary:
       left:
         Binary:
@@ -72,50 +48,30 @@ outputs:
               Implicit:
                 - "1"
                 - span:
-                    line_start: 1
-                    line_stop: 1
-                    col_start: 1
-                    col_stop: 2
-                    path: ""
-                    content: 1 + 2 + 3
+                    lo: 0
+                    hi: 1
           right:
             Value:
               Implicit:
                 - "2"
                 - span:
-                    line_start: 1
-                    line_stop: 1
-                    col_start: 5
-                    col_stop: 6
-                    path: ""
-                    content: 1 + 2 + 3
+                    lo: 4
+                    hi: 5
           op: Add
           span:
-            line_start: 1
-            line_stop: 1
-            col_start: 1
-            col_stop: 6
-            path: ""
-            content: 1 + 2 + 3
+            lo: 0
+            hi: 5
       right:
         Value:
           Implicit:
             - "3"
             - span:
-                line_start: 1
-                line_stop: 1
-                col_start: 9
-                col_stop: 10
-                path: ""
-                content: 1 + 2 + 3
+                lo: 8
+                hi: 9
       op: Add
       span:
-        line_start: 1
-        line_stop: 1
-        col_start: 1
-        col_stop: 10
-        path: ""
-        content: 1 + 2 + 3
+        lo: 0
+        hi: 9
   - Binary:
       left:
         Binary:
@@ -124,31 +80,19 @@ outputs:
               Implicit:
                 - "1"
                 - span:
-                    line_start: 1
-                    line_stop: 1
-                    col_start: 1
-                    col_stop: 2
-                    path: ""
-                    content: 1 * 2 + 3 * 4
+                    lo: 0
+                    hi: 1
           right:
             Value:
               Implicit:
                 - "2"
                 - span:
-                    line_start: 1
-                    line_stop: 1
-                    col_start: 5
-                    col_stop: 6
-                    path: ""
-                    content: 1 * 2 + 3 * 4
+                    lo: 4
+                    hi: 5
           op: Mul
           span:
-            line_start: 1
-            line_stop: 1
-            col_start: 1
-            col_stop: 6
-            path: ""
-            content: 1 * 2 + 3 * 4
+            lo: 0
+            hi: 5
       right:
         Binary:
           left:
@@ -156,39 +100,23 @@ outputs:
               Implicit:
                 - "3"
                 - span:
-                    line_start: 1
-                    line_stop: 1
-                    col_start: 9
-                    col_stop: 10
-                    path: ""
-                    content: 1 * 2 + 3 * 4
+                    lo: 8
+                    hi: 9
           right:
             Value:
               Implicit:
                 - "4"
                 - span:
-                    line_start: 1
-                    line_stop: 1
-                    col_start: 13
-                    col_stop: 14
-                    path: ""
-                    content: 1 * 2 + 3 * 4
+                    lo: 12
+                    hi: 13
           op: Mul
           span:
-            line_start: 1
-            line_stop: 1
-            col_start: 9
-            col_stop: 14
-            path: ""
-            content: 1 * 2 + 3 * 4
+            lo: 8
+            hi: 13
       op: Add
       span:
-        line_start: 1
-        line_stop: 1
-        col_start: 1
-        col_stop: 14
-        path: ""
-        content: 1 * 2 + 3 * 4
+        lo: 0
+        hi: 13
   - Binary:
       left:
         Binary:
@@ -197,50 +125,30 @@ outputs:
               Implicit:
                 - "1"
                 - span:
-                    line_start: 1
-                    line_stop: 1
-                    col_start: 1
-                    col_stop: 2
-                    path: ""
-                    content: 1 + 2 - 3
+                    lo: 0
+                    hi: 1
           right:
             Value:
               Implicit:
                 - "2"
                 - span:
-                    line_start: 1
-                    line_stop: 1
-                    col_start: 5
-                    col_stop: 6
-                    path: ""
-                    content: 1 + 2 - 3
+                    lo: 4
+                    hi: 5
           op: Add
           span:
-            line_start: 1
-            line_stop: 1
-            col_start: 1
-            col_stop: 6
-            path: ""
-            content: 1 + 2 - 3
+            lo: 0
+            hi: 5
       right:
         Value:
           Implicit:
             - "3"
             - span:
-                line_start: 1
-                line_stop: 1
-                col_start: 9
-                col_stop: 10
-                path: ""
-                content: 1 + 2 - 3
+                lo: 8
+                hi: 9
       op: Sub
       span:
-        line_start: 1
-        line_stop: 1
-        col_start: 1
-        col_stop: 10
-        path: ""
-        content: 1 + 2 - 3
+        lo: 0
+        hi: 9
   - Binary:
       left:
         Binary:
@@ -251,31 +159,19 @@ outputs:
                   Implicit:
                     - "1"
                     - span:
-                        line_start: 1
-                        line_stop: 1
-                        col_start: 1
-                        col_stop: 2
-                        path: ""
-                        content: 1 * 2 + 3 * 4 - 5 * 6
+                        lo: 0
+                        hi: 1
               right:
                 Value:
                   Implicit:
                     - "2"
                     - span:
-                        line_start: 1
-                        line_stop: 1
-                        col_start: 5
-                        col_stop: 6
-                        path: ""
-                        content: 1 * 2 + 3 * 4 - 5 * 6
+                        lo: 4
+                        hi: 5
               op: Mul
               span:
-                line_start: 1
-                line_stop: 1
-                col_start: 1
-                col_stop: 6
-                path: ""
-                content: 1 * 2 + 3 * 4 - 5 * 6
+                lo: 0
+                hi: 5
           right:
             Binary:
               left:
@@ -283,39 +179,23 @@ outputs:
                   Implicit:
                     - "3"
                     - span:
-                        line_start: 1
-                        line_stop: 1
-                        col_start: 9
-                        col_stop: 10
-                        path: ""
-                        content: 1 * 2 + 3 * 4 - 5 * 6
+                        lo: 8
+                        hi: 9
               right:
                 Value:
                   Implicit:
                     - "4"
                     - span:
-                        line_start: 1
-                        line_stop: 1
-                        col_start: 13
-                        col_stop: 14
-                        path: ""
-                        content: 1 * 2 + 3 * 4 - 5 * 6
+                        lo: 12
+                        hi: 13
               op: Mul
               span:
-                line_start: 1
-                line_stop: 1
-                col_start: 9
-                col_stop: 14
-                path: ""
-                content: 1 * 2 + 3 * 4 - 5 * 6
+                lo: 8
+                hi: 13
           op: Add
           span:
-            line_start: 1
-            line_stop: 1
-            col_start: 1
-            col_stop: 14
-            path: ""
-            content: 1 * 2 + 3 * 4 - 5 * 6
+            lo: 0
+            hi: 13
       right:
         Binary:
           left:
@@ -323,36 +203,20 @@ outputs:
               Implicit:
                 - "5"
                 - span:
-                    line_start: 1
-                    line_stop: 1
-                    col_start: 17
-                    col_stop: 18
-                    path: ""
-                    content: 1 * 2 + 3 * 4 - 5 * 6
+                    lo: 16
+                    hi: 17
           right:
             Value:
               Implicit:
                 - "6"
                 - span:
-                    line_start: 1
-                    line_stop: 1
-                    col_start: 21
-                    col_stop: 22
-                    path: ""
-                    content: 1 * 2 + 3 * 4 - 5 * 6
+                    lo: 20
+                    hi: 21
           op: Mul
           span:
-            line_start: 1
-            line_stop: 1
-            col_start: 17
-            col_stop: 22
-            path: ""
-            content: 1 * 2 + 3 * 4 - 5 * 6
+            lo: 16
+            hi: 21
       op: Sub
       span:
-        line_start: 1
-        line_stop: 1
-        col_start: 1
-        col_stop: 22
-        path: ""
-        content: 1 * 2 + 3 * 4 - 5 * 6
+        lo: 0
+        hi: 21

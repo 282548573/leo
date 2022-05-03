@@ -5,8 +5,8 @@ outputs:
   - name: ""
     expected_input: []
     functions:
-      "{\"name\":\"x\",\"span\":\"{\\\"line_start\\\":3,\\\"line_stop\\\":3,\\\"col_start\\\":16,\\\"col_stop\\\":17,\\\"path\\\":\\\"\\\",\\\"content\\\":\\\"const function x() {\\\"}\"}":
-        identifier: "{\"name\":\"x\",\"span\":\"{\\\"line_start\\\":3,\\\"line_stop\\\":3,\\\"col_start\\\":16,\\\"col_stop\\\":17,\\\"path\\\":\\\"\\\",\\\"content\\\":\\\"const function x() {\\\"}\"}"
+      "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":17,\\\"hi\\\":18}\"}":
+        identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":17,\\\"hi\\\":18}\"}"
         input: []
         const_: true
         output: ~
@@ -19,30 +19,14 @@ outputs:
                     Implicit:
                       - "0"
                       - span:
-                          line_start: 4
-                          line_stop: 4
-                          col_start: 12
-                          col_stop: 13
-                          path: ""
-                          content: "    return 0;"
+                          lo: 34
+                          hi: 35
                 span:
-                  line_start: 4
-                  line_stop: 4
-                  col_start: 5
-                  col_stop: 13
-                  path: ""
-                  content: "    return 0;"
+                  lo: 27
+                  hi: 35
           span:
-            line_start: 3
-            line_stop: 5
-            col_start: 20
-            col_stop: 2
-            path: ""
-            content: "const function x() {\n     ...\n}"
+            lo: 21
+            hi: 38
         span:
-          line_start: 3
-          line_stop: 5
-          col_start: 7
-          col_stop: 2
-          path: ""
-          content: "const function x() {\n     ...\n}"
+          lo: 8
+          hi: 38
