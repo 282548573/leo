@@ -76,7 +76,7 @@ impl ParserContext<'_> {
     /// Also returns the span of the parsed token.
     pub fn parse_all_types(&mut self) -> Result<(Type, Span)> {
         Ok(if let Some(ident) = self.eat_identifier() {
-            let span = ident.span.clone();
+            let span = ident.span;
             (Type::Identifier(ident), span)
         } else {
             self.parse_non_ident_types()?

@@ -16,7 +16,7 @@
 
 use leo_span::{Span, Symbol};
 
-use crate::Node;
+use crate::{simple_node_impl, Node};
 use serde::{
     de::{
         Visitor, {self},
@@ -42,15 +42,7 @@ pub struct Identifier {
     pub span: Span,
 }
 
-impl Node for Identifier {
-    fn span(&self) -> &Span {
-        &self.span
-    }
-
-    fn set_span(&mut self, span: Span) {
-        self.span = span;
-    }
-}
+simple_node_impl!(Identifier);
 
 impl Identifier {
     /// Constructs a new identifier with `name` and a default span.

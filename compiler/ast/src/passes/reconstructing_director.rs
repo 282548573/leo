@@ -234,7 +234,7 @@ impl<R: ReconstructingReducer> ReconstructingDirector<R> {
                 let formatted = ConsoleArgs {
                     string: args.string.clone(),
                     parameters,
-                    span: args.span.clone(),
+                    span: args.span,
                 };
 
                 match &console_function_call.function {
