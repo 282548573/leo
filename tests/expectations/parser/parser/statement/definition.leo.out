@@ -10,12 +10,13 @@ outputs:
           span:
             lo: 4
             hi: 5
-      type_: ~
+      type_:
+        IntegerType: U8
       value:
-        Identifier: "{\"name\":\"expr\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":12}\"}"
+        Identifier: "{\"name\":\"expr\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":16}\"}"
       span:
         lo: 0
-        hi: 12
+        hi: 16
   - Definition:
       declaration_type: Let
       variable_names:
@@ -24,20 +25,21 @@ outputs:
           span:
             lo: 4
             hi: 5
-      type_: ~
+      type_:
+        IntegerType: U16
       value:
         Binary:
           left:
-            Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":9}\"}"
+            Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":13,\\\"hi\\\":14}\"}"
           right:
-            Identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":10,\\\"hi\\\":11}\"}"
+            Identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":15,\\\"hi\\\":16}\"}"
           op: Add
           span:
-            lo: 8
-            hi: 11
+            lo: 13
+            hi: 16
       span:
         lo: 0
-        hi: 11
+        hi: 16
   - Definition:
       declaration_type: Let
       variable_names:
@@ -46,18 +48,19 @@ outputs:
           span:
             lo: 4
             hi: 5
-      type_: ~
+      type_:
+        IntegerType: U8
       value:
         Call:
           function:
-            Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":9}\"}"
+            Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":13}\"}"
           arguments: []
           span:
-            lo: 8
-            hi: 11
+            lo: 12
+            hi: 15
       span:
         lo: 0
-        hi: 11
+        hi: 15
   - Definition:
       declaration_type: Const
       variable_names:
@@ -66,12 +69,13 @@ outputs:
           span:
             lo: 6
             hi: 7
-      type_: ~
+      type_:
+        IntegerType: I8
       value:
-        Identifier: "{\"name\":\"expr\",\"span\":\"{\\\"lo\\\":10,\\\"hi\\\":14}\"}"
+        Identifier: "{\"name\":\"expr\",\"span\":\"{\\\"lo\\\":14,\\\"hi\\\":18}\"}"
       span:
         lo: 0
-        hi: 14
+        hi: 18
   - Definition:
       declaration_type: Const
       variable_names:
@@ -80,20 +84,21 @@ outputs:
           span:
             lo: 6
             hi: 7
-      type_: ~
+      type_:
+        IntegerType: I16
       value:
         Binary:
           left:
-            Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":10,\\\"hi\\\":11}\"}"
+            Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":15,\\\"hi\\\":16}\"}"
           right:
-            Identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":13}\"}"
+            Identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":17,\\\"hi\\\":18}\"}"
           op: Add
           span:
-            lo: 10
-            hi: 13
+            lo: 15
+            hi: 18
       span:
         lo: 0
-        hi: 13
+        hi: 18
   - Definition:
       declaration_type: Const
       variable_names:
@@ -102,18 +107,19 @@ outputs:
           span:
             lo: 6
             hi: 7
-      type_: ~
+      type_:
+        IntegerType: I8
       value:
         Call:
           function:
-            Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":10,\\\"hi\\\":11}\"}"
+            Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":14,\\\"hi\\\":15}\"}"
           arguments: []
           span:
-            lo: 10
-            hi: 13
+            lo: 14
+            hi: 17
       span:
         lo: 0
-        hi: 13
+        hi: 17
   - Definition:
       declaration_type: Let
       variable_names:
@@ -232,296 +238,6 @@ outputs:
       span:
         lo: 0
         hi: 18
-  - Definition:
-      declaration_type: Let
-      variable_names:
-        - mutable: true
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":5,\\\"hi\\\":6}\"}"
-          span:
-            lo: 5
-            hi: 6
-        - mutable: true
-          identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":9}\"}"
-          span:
-            lo: 8
-            hi: 9
-      type_: ~
-      value:
-        Identifier: "{\"name\":\"expr\",\"span\":\"{\\\"lo\\\":13,\\\"hi\\\":17}\"}"
-      span:
-        lo: 0
-        hi: 17
-  - Definition:
-      declaration_type: Let
-      variable_names:
-        - mutable: true
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":5,\\\"hi\\\":6}\"}"
-          span:
-            lo: 5
-            hi: 6
-        - mutable: true
-          identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":9}\"}"
-          span:
-            lo: 8
-            hi: 9
-      type_: ~
-      value:
-        Binary:
-          left:
-            Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":13,\\\"hi\\\":14}\"}"
-          right:
-            Identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":15,\\\"hi\\\":16}\"}"
-          op: Add
-          span:
-            lo: 13
-            hi: 16
-      span:
-        lo: 0
-        hi: 16
-  - Definition:
-      declaration_type: Let
-      variable_names:
-        - mutable: true
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":5,\\\"hi\\\":6}\"}"
-          span:
-            lo: 5
-            hi: 6
-        - mutable: true
-          identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":9}\"}"
-          span:
-            lo: 8
-            hi: 9
-      type_: ~
-      value:
-        Call:
-          function:
-            Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":13,\\\"hi\\\":14}\"}"
-          arguments: []
-          span:
-            lo: 13
-            hi: 16
-      span:
-        lo: 0
-        hi: 16
-  - Definition:
-      declaration_type: Const
-      variable_names:
-        - mutable: false
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":7,\\\"hi\\\":8}\"}"
-          span:
-            lo: 7
-            hi: 8
-        - mutable: false
-          identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":10,\\\"hi\\\":11}\"}"
-          span:
-            lo: 10
-            hi: 11
-      type_: ~
-      value:
-        Identifier: "{\"name\":\"expr\",\"span\":\"{\\\"lo\\\":15,\\\"hi\\\":19}\"}"
-      span:
-        lo: 0
-        hi: 19
-  - Definition:
-      declaration_type: Const
-      variable_names:
-        - mutable: false
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":7,\\\"hi\\\":8}\"}"
-          span:
-            lo: 7
-            hi: 8
-        - mutable: false
-          identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":10,\\\"hi\\\":11}\"}"
-          span:
-            lo: 10
-            hi: 11
-      type_: ~
-      value:
-        Binary:
-          left:
-            Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":15,\\\"hi\\\":16}\"}"
-          right:
-            Identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":17,\\\"hi\\\":18}\"}"
-          op: Add
-          span:
-            lo: 15
-            hi: 18
-      span:
-        lo: 0
-        hi: 18
-  - Definition:
-      declaration_type: Const
-      variable_names:
-        - mutable: false
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":7,\\\"hi\\\":8}\"}"
-          span:
-            lo: 7
-            hi: 8
-        - mutable: false
-          identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":10,\\\"hi\\\":11}\"}"
-          span:
-            lo: 10
-            hi: 11
-      type_: ~
-      value:
-        Call:
-          function:
-            Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":15,\\\"hi\\\":16}\"}"
-          arguments: []
-          span:
-            lo: 15
-            hi: 18
-      span:
-        lo: 0
-        hi: 18
-  - Definition:
-      declaration_type: Let
-      variable_names:
-        - mutable: true
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":5,\\\"hi\\\":6}\"}"
-          span:
-            lo: 5
-            hi: 6
-        - mutable: true
-          identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":9}\"}"
-          span:
-            lo: 8
-            hi: 9
-      type_:
-        IntegerType: U32
-      value:
-        Identifier: "{\"name\":\"expr\",\"span\":\"{\\\"lo\\\":18,\\\"hi\\\":22}\"}"
-      span:
-        lo: 0
-        hi: 22
-  - Definition:
-      declaration_type: Let
-      variable_names:
-        - mutable: true
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":5,\\\"hi\\\":6}\"}"
-          span:
-            lo: 5
-            hi: 6
-        - mutable: true
-          identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":9}\"}"
-          span:
-            lo: 8
-            hi: 9
-      type_:
-        IntegerType: U32
-      value:
-        Binary:
-          left:
-            Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":18,\\\"hi\\\":19}\"}"
-          right:
-            Identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":20,\\\"hi\\\":21}\"}"
-          op: Add
-          span:
-            lo: 18
-            hi: 21
-      span:
-        lo: 0
-        hi: 21
-  - Definition:
-      declaration_type: Let
-      variable_names:
-        - mutable: true
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":5,\\\"hi\\\":6}\"}"
-          span:
-            lo: 5
-            hi: 6
-        - mutable: true
-          identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":9}\"}"
-          span:
-            lo: 8
-            hi: 9
-      type_:
-        IntegerType: U32
-      value:
-        Call:
-          function:
-            Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":18,\\\"hi\\\":19}\"}"
-          arguments: []
-          span:
-            lo: 18
-            hi: 21
-      span:
-        lo: 0
-        hi: 21
-  - Definition:
-      declaration_type: Const
-      variable_names:
-        - mutable: false
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":7,\\\"hi\\\":8}\"}"
-          span:
-            lo: 7
-            hi: 8
-        - mutable: false
-          identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":10,\\\"hi\\\":11}\"}"
-          span:
-            lo: 10
-            hi: 11
-      type_:
-        IntegerType: U32
-      value:
-        Identifier: "{\"name\":\"expr\",\"span\":\"{\\\"lo\\\":20,\\\"hi\\\":24}\"}"
-      span:
-        lo: 0
-        hi: 24
-  - Definition:
-      declaration_type: Const
-      variable_names:
-        - mutable: false
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":7,\\\"hi\\\":8}\"}"
-          span:
-            lo: 7
-            hi: 8
-        - mutable: false
-          identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":10,\\\"hi\\\":11}\"}"
-          span:
-            lo: 10
-            hi: 11
-      type_:
-        IntegerType: U32
-      value:
-        Binary:
-          left:
-            Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":20,\\\"hi\\\":21}\"}"
-          right:
-            Identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":22,\\\"hi\\\":23}\"}"
-          op: Add
-          span:
-            lo: 20
-            hi: 23
-      span:
-        lo: 0
-        hi: 23
-  - Definition:
-      declaration_type: Const
-      variable_names:
-        - mutable: false
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":7,\\\"hi\\\":8}\"}"
-          span:
-            lo: 7
-            hi: 8
-        - mutable: false
-          identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":10,\\\"hi\\\":11}\"}"
-          span:
-            lo: 10
-            hi: 11
-      type_:
-        IntegerType: U32
-      value:
-        Call:
-          function:
-            Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":20,\\\"hi\\\":21}\"}"
-          arguments: []
-          span:
-            lo: 20
-            hi: 23
-      span:
-        lo: 0
-        hi: 23
   - Definition:
       declaration_type: Let
       variable_names:

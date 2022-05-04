@@ -10,20 +10,21 @@ outputs:
           span:
             lo: 4
             hi: 5
-      type_: ~
+      type_:
+        IntegerType: U8
       value:
         Binary:
           left:
-            Identifier: "{\"name\":\"a\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":9}\"}"
+            Identifier: "{\"name\":\"a\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":13}\"}"
           right:
-            Identifier: "{\"name\":\"b\",\"span\":\"{\\\"lo\\\":13,\\\"hi\\\":14}\"}"
+            Identifier: "{\"name\":\"b\",\"span\":\"{\\\"lo\\\":17,\\\"hi\\\":18}\"}"
           op: Eq
           span:
-            lo: 8
-            hi: 14
+            lo: 12
+            hi: 18
       span:
         lo: 0
-        hi: 14
+        hi: 18
   - Definition:
       declaration_type: Let
       variable_names:
@@ -32,20 +33,21 @@ outputs:
           span:
             lo: 4
             hi: 5
-      type_: ~
+      type_:
+        IntegerType: U8
       value:
         Binary:
           left:
-            Identifier: "{\"name\":\"a\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":9}\"}"
+            Identifier: "{\"name\":\"a\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":13}\"}"
           right:
-            Identifier: "{\"name\":\"b\",\"span\":\"{\\\"lo\\\":13,\\\"hi\\\":14}\"}"
+            Identifier: "{\"name\":\"b\",\"span\":\"{\\\"lo\\\":17,\\\"hi\\\":18}\"}"
           op: Ne
           span:
-            lo: 8
-            hi: 14
+            lo: 12
+            hi: 18
       span:
         lo: 0
-        hi: 14
+        hi: 18
   - Definition:
       declaration_type: Let
       variable_names:
@@ -54,20 +56,21 @@ outputs:
           span:
             lo: 4
             hi: 5
-      type_: ~
+      type_:
+        IntegerType: U8
       value:
         Binary:
           left:
-            Identifier: "{\"name\":\"a\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":9}\"}"
+            Identifier: "{\"name\":\"a\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":13}\"}"
           right:
-            Identifier: "{\"name\":\"b\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":13}\"}"
+            Identifier: "{\"name\":\"b\",\"span\":\"{\\\"lo\\\":16,\\\"hi\\\":17}\"}"
           op: Gt
           span:
-            lo: 8
-            hi: 13
+            lo: 12
+            hi: 17
       span:
         lo: 0
-        hi: 13
+        hi: 17
   - Definition:
       declaration_type: Let
       variable_names:
@@ -76,20 +79,21 @@ outputs:
           span:
             lo: 4
             hi: 5
-      type_: ~
+      type_:
+        IntegerType: U8
       value:
         Binary:
           left:
-            Identifier: "{\"name\":\"a\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":9}\"}"
+            Identifier: "{\"name\":\"a\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":13}\"}"
           right:
-            Identifier: "{\"name\":\"b\",\"span\":\"{\\\"lo\\\":13,\\\"hi\\\":14}\"}"
+            Identifier: "{\"name\":\"b\",\"span\":\"{\\\"lo\\\":17,\\\"hi\\\":18}\"}"
           op: Ge
           span:
-            lo: 8
-            hi: 14
+            lo: 12
+            hi: 18
       span:
         lo: 0
-        hi: 14
+        hi: 18
   - Definition:
       declaration_type: Let
       variable_names:
@@ -98,20 +102,21 @@ outputs:
           span:
             lo: 4
             hi: 5
-      type_: ~
+      type_:
+        IntegerType: U8
       value:
         Binary:
           left:
-            Identifier: "{\"name\":\"a\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":9}\"}"
+            Identifier: "{\"name\":\"a\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":13}\"}"
           right:
-            Identifier: "{\"name\":\"b\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":13}\"}"
+            Identifier: "{\"name\":\"b\",\"span\":\"{\\\"lo\\\":16,\\\"hi\\\":17}\"}"
           op: Lt
           span:
-            lo: 8
-            hi: 13
+            lo: 12
+            hi: 17
       span:
         lo: 0
-        hi: 13
+        hi: 17
   - Definition:
       declaration_type: Let
       variable_names:
@@ -120,20 +125,21 @@ outputs:
           span:
             lo: 4
             hi: 5
-      type_: ~
+      type_:
+        IntegerType: U8
       value:
         Binary:
           left:
-            Identifier: "{\"name\":\"a\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":9}\"}"
+            Identifier: "{\"name\":\"a\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":13}\"}"
           right:
-            Identifier: "{\"name\":\"b\",\"span\":\"{\\\"lo\\\":13,\\\"hi\\\":14}\"}"
+            Identifier: "{\"name\":\"b\",\"span\":\"{\\\"lo\\\":17,\\\"hi\\\":18}\"}"
           op: Le
           span:
-            lo: 8
-            hi: 14
+            lo: 12
+            hi: 18
       span:
         lo: 0
-        hi: 14
+        hi: 18
   - Definition:
       declaration_type: Let
       variable_names:
@@ -142,20 +148,21 @@ outputs:
           span:
             lo: 4
             hi: 5
-      type_: ~
+      type_:
+        IntegerType: U8
       value:
         Binary:
           left:
-            Identifier: "{\"name\":\"a\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":9}\"}"
+            Identifier: "{\"name\":\"a\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":13}\"}"
           right:
-            Identifier: "{\"name\":\"b\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":13}\"}"
+            Identifier: "{\"name\":\"b\",\"span\":\"{\\\"lo\\\":16,\\\"hi\\\":17}\"}"
           op: Gt
           span:
-            lo: 8
-            hi: 13
+            lo: 12
+            hi: 17
       span:
         lo: 0
-        hi: 13
+        hi: 17
   - Assign:
       operation: Assign
       assignee:

@@ -5,70 +5,77 @@ outputs:
   - Binary:
       left:
         Value:
-          Implicit:
+          Integer:
+            - U8
             - "1"
             - span:
                 lo: 0
-                hi: 1
+                hi: 3
       right:
         Value:
-          Implicit:
+          Integer:
+            - U8
             - "1"
             - span:
-                lo: 5
-                hi: 6
+                lo: 7
+                hi: 10
       op: Pow
       span:
         lo: 0
-        hi: 6
+        hi: 10
   - Binary:
       left:
         Value:
-          Implicit:
+          Integer:
+            - U8
             - "2"
             - span:
                 lo: 0
-                hi: 1
+                hi: 3
       right:
         Value:
-          Implicit:
+          Integer:
+            - U8
             - "3"
             - span:
-                lo: 3
-                hi: 4
+                lo: 5
+                hi: 8
       op: Pow
       span:
         lo: 0
-        hi: 4
+        hi: 8
   - Binary:
       left:
         Value:
-          Implicit:
+          Integer:
+            - U8
             - "1"
             - span:
                 lo: 0
-                hi: 1
+                hi: 3
       right:
         Binary:
           left:
             Value:
-              Implicit:
+              Integer:
+                - U8
                 - "2"
                 - span:
-                    lo: 5
-                    hi: 6
+                    lo: 7
+                    hi: 10
           right:
             Value:
-              Implicit:
+              Integer:
+                - U8
                 - "3"
                 - span:
-                    lo: 10
-                    hi: 11
+                    lo: 14
+                    hi: 17
           op: Pow
           span:
-            lo: 5
-            hi: 11
+            lo: 7
+            hi: 17
       op: Pow
       span:
         lo: 0
-        hi: 11
+        hi: 17

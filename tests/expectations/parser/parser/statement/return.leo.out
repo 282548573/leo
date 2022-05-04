@@ -11,11 +11,12 @@ outputs:
   - Return:
       expression:
         Value:
-          Implicit:
+          Integer:
+            - U8
             - "5"
             - span:
                 lo: 7
-                hi: 8
+                hi: 10
       span:
         lo: 0
-        hi: 8
+        hi: 10

@@ -24,30 +24,31 @@ outputs:
             name: "{\"name\":\"b\",\"span\":\"{\\\"lo\\\":38,\\\"hi\\\":39}\"}"
             value:
               Value:
-                Implicit:
+                Integer:
+                  - U8
                   - "2"
                   - span:
                       lo: 49
-                      hi: 50
+                      hi: 52
             span:
               lo: 41
               hi: 43
           - mode: Constant
             type_: Field
-            name: "{\"name\":\"c\",\"span\":\"{\\\"lo\\\":58,\\\"hi\\\":59}\"}"
+            name: "{\"name\":\"c\",\"span\":\"{\\\"lo\\\":60,\\\"hi\\\":61}\"}"
             value:
               Value:
-                Implicit:
+                Field:
                   - "0"
                   - span:
-                      lo: 69
-                      hi: 70
+                      lo: 71
+                      hi: 77
             span:
-              lo: 61
-              hi: 66
+              lo: 63
+              hi: 68
           - mode: Constant
             type_: Group
-            name: "{\"name\":\"d\",\"span\":\"{\\\"lo\\\":78,\\\"hi\\\":79}\"}"
+            name: "{\"name\":\"d\",\"span\":\"{\\\"lo\\\":85,\\\"hi\\\":86}\"}"
             value:
               Value:
                 Group:
@@ -56,53 +57,54 @@ outputs:
                       Number:
                         - "0"
                         - span:
-                            lo: 90
-                            hi: 91
+                            lo: 97
+                            hi: 98
                     y:
                       Number:
                         - "1"
                         - span:
-                            lo: 93
-                            hi: 94
+                            lo: 100
+                            hi: 101
                     span:
-                      lo: 89
-                      hi: 100
+                      lo: 96
+                      hi: 107
             span:
-              lo: 81
-              hi: 86
+              lo: 88
+              hi: 93
           - mode: Constant
             type_: Address
-            name: "{\"name\":\"e\",\"span\":\"{\\\"lo\\\":108,\\\"hi\\\":109}\"}"
+            name: "{\"name\":\"e\",\"span\":\"{\\\"lo\\\":115,\\\"hi\\\":116}\"}"
             value:
               Value:
                 Address:
                   - aleo1qnr4dkkvkgfqph0vzc3y6z2eu975wnpz2925ntjccd5cfqxtyu8sta57j8
                   - span:
-                      lo: 121
-                      hi: 184
+                      lo: 128
+                      hi: 191
             span:
-              lo: 111
-              hi: 118
+              lo: 118
+              hi: 125
           - mode: Constant
             type_:
               IntegerType: I8
-            name: "{\"name\":\"f\",\"span\":\"{\\\"lo\\\":192,\\\"hi\\\":193}\"}"
+            name: "{\"name\":\"f\",\"span\":\"{\\\"lo\\\":199,\\\"hi\\\":200}\"}"
             value:
               Unary:
                 inner:
                   Value:
-                    Implicit:
+                    Integer:
+                      - I8
                       - "2"
                       - span:
-                          lo: 204
-                          hi: 205
+                          lo: 211
+                          hi: 214
                 op: Negate
                 span:
-                  lo: 203
-                  hi: 205
+                  lo: 210
+                  hi: 214
             span:
-              lo: 195
-              hi: 197
+              lo: 202
+              hi: 204
         span:
           lo: 3
           hi: 7
@@ -110,47 +112,48 @@ outputs:
         definitions:
           - mode: Private
             type_: Boolean
-            name: "{\"name\":\"r0\",\"span\":\"{\\\"lo\\\":220,\\\"hi\\\":222}\"}"
+            name: "{\"name\":\"r0\",\"span\":\"{\\\"lo\\\":229,\\\"hi\\\":231}\"}"
             value:
               Value:
                 Boolean:
                   - "true"
                   - span:
-                      lo: 232
-                      hi: 236
+                      lo: 241
+                      hi: 245
             span:
-              lo: 224
-              hi: 228
+              lo: 233
+              hi: 237
           - mode: Private
             type_:
               IntegerType: U8
-            name: "{\"name\":\"r1\",\"span\":\"{\\\"lo\\\":238,\\\"hi\\\":240}\"}"
+            name: "{\"name\":\"r1\",\"span\":\"{\\\"lo\\\":247,\\\"hi\\\":249}\"}"
             value:
               Value:
-                Implicit:
+                Integer:
+                  - U8
                   - "2"
                   - span:
-                      lo: 250
-                      hi: 251
+                      lo: 259
+                      hi: 262
             span:
-              lo: 242
-              hi: 244
+              lo: 251
+              hi: 253
           - mode: Private
             type_: Field
-            name: "{\"name\":\"r2\",\"span\":\"{\\\"lo\\\":253,\\\"hi\\\":255}\"}"
+            name: "{\"name\":\"r2\",\"span\":\"{\\\"lo\\\":264,\\\"hi\\\":266}\"}"
             value:
               Value:
-                Implicit:
+                Field:
                   - "0"
                   - span:
-                      lo: 265
-                      hi: 266
+                      lo: 276
+                      hi: 282
             span:
-              lo: 257
-              hi: 262
+              lo: 268
+              hi: 273
           - mode: Private
             type_: Group
-            name: "{\"name\":\"r3\",\"span\":\"{\\\"lo\\\":268,\\\"hi\\\":270}\"}"
+            name: "{\"name\":\"r3\",\"span\":\"{\\\"lo\\\":284,\\\"hi\\\":286}\"}"
             value:
               Value:
                 Group:
@@ -159,53 +162,54 @@ outputs:
                       Number:
                         - "0"
                         - span:
-                            lo: 281
-                            hi: 282
+                            lo: 297
+                            hi: 298
                     y:
                       Number:
                         - "1"
                         - span:
-                            lo: 284
-                            hi: 285
+                            lo: 300
+                            hi: 301
                     span:
-                      lo: 280
-                      hi: 291
+                      lo: 296
+                      hi: 307
             span:
-              lo: 272
-              hi: 277
+              lo: 288
+              hi: 293
           - mode: Private
             type_: Address
-            name: "{\"name\":\"r4\",\"span\":\"{\\\"lo\\\":293,\\\"hi\\\":295}\"}"
+            name: "{\"name\":\"r4\",\"span\":\"{\\\"lo\\\":309,\\\"hi\\\":311}\"}"
             value:
               Value:
                 Address:
                   - aleo1qnr4dkkvkgfqph0vzc3y6z2eu975wnpz2925ntjccd5cfqxtyu8sta57j8
                   - span:
-                      lo: 307
-                      hi: 370
+                      lo: 323
+                      hi: 386
             span:
-              lo: 297
-              hi: 304
+              lo: 313
+              hi: 320
           - mode: Private
             type_:
               IntegerType: I8
-            name: "{\"name\":\"r4\",\"span\":\"{\\\"lo\\\":372,\\\"hi\\\":374}\"}"
+            name: "{\"name\":\"r4\",\"span\":\"{\\\"lo\\\":388,\\\"hi\\\":390}\"}"
             value:
               Unary:
                 inner:
                   Value:
-                    Implicit:
+                    Integer:
+                      - I8
                       - "1"
                       - span:
-                          lo: 382
-                          hi: 383
+                          lo: 398
+                          hi: 401
                 op: Negate
                 span:
-                  lo: 381
-                  hi: 383
+                  lo: 397
+                  hi: 401
             span:
-              lo: 376
-              hi: 378
+              lo: 392
+              hi: 394
         span:
-          lo: 209
-          hi: 218
+          lo: 218
+          hi: 227

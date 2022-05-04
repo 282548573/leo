@@ -17,35 +17,37 @@ outputs:
                 lo: 19
                 hi: 20
         const_: false
-        output: ~
+        output:
+          IntegerType: U8
         core_mapping: ~
         block:
           statements: []
           span:
-            lo: 26
-            hi: 28
+            lo: 32
+            hi: 34
         span:
           lo: 2
-          hi: 28
-      "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":39,\\\"hi\\\":40}\"}":
-        identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":39,\\\"hi\\\":40}\"}"
+          hi: 34
+      "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":45,\\\"hi\\\":46}\"}":
+        identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":45,\\\"hi\\\":46}\"}"
         input:
           - Variable:
-              identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":50,\\\"hi\\\":51}\"}"
+              identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":56,\\\"hi\\\":57}\"}"
               mode: Constant
               type_:
                 IntegerType: U64
               span:
-                lo: 50
-                hi: 51
+                lo: 56
+                hi: 57
         const_: false
-        output: ~
+        output:
+          IntegerType: U8
         core_mapping: ~
         block:
           statements: []
           span:
-            lo: 58
-            hi: 60
+            lo: 70
+            hi: 72
         span:
-          lo: 30
-          hi: 60
+          lo: 36
+          hi: 72

@@ -10,11 +10,12 @@ outputs:
             lo: 0
             hi: 5
   - Value:
-      Implicit:
+      Integer:
+        - U8
         - "123"
         - span:
             lo: 0
-            hi: 3
+            hi: 5
   - Value:
       Integer:
         - U8

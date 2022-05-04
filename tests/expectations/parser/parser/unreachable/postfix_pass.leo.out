@@ -21,9 +21,40 @@ outputs:
           span:
             lo: 4
             hi: 5
-      type_: ~
+      type_:
+        IntegerType: U8
       value:
-        Identifier: "{\"name\":\"aimport\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":15}\"}"
+        Identifier: "{\"name\":\"aimport\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":19}\"}"
+      span:
+        lo: 0
+        hi: 19
+  - Definition:
+      declaration_type: Let
+      variable_names:
+        - mutable: true
+          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
+          span:
+            lo: 4
+            hi: 5
+      type_:
+        IntegerType: U8
+      value:
+        Identifier: "{\"name\":\"a_\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":14}\"}"
+      span:
+        lo: 0
+        hi: 14
+  - Definition:
+      declaration_type: Let
+      variable_names:
+        - mutable: true
+          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
+          span:
+            lo: 4
+            hi: 5
+      type_:
+        IntegerType: U8
+      value:
+        Identifier: "{\"name\":\"aas\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":15}\"}"
       span:
         lo: 0
         hi: 15
@@ -35,12 +66,13 @@ outputs:
           span:
             lo: 4
             hi: 5
-      type_: ~
+      type_:
+        IntegerType: U8
       value:
-        Identifier: "{\"name\":\"a_\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":10}\"}"
+        Identifier: "{\"name\":\"aconsole\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":20}\"}"
       span:
         lo: 0
-        hi: 10
+        hi: 20
   - Definition:
       declaration_type: Let
       variable_names:
@@ -49,12 +81,13 @@ outputs:
           span:
             lo: 4
             hi: 5
-      type_: ~
+      type_:
+        IntegerType: U8
       value:
-        Identifier: "{\"name\":\"aas\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":11}\"}"
+        Identifier: "{\"name\":\"aconst\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":18}\"}"
       span:
         lo: 0
-        hi: 11
+        hi: 18
   - Definition:
       declaration_type: Let
       variable_names:
@@ -63,9 +96,10 @@ outputs:
           span:
             lo: 4
             hi: 5
-      type_: ~
+      type_:
+        IntegerType: U8
       value:
-        Identifier: "{\"name\":\"aconsole\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":16}\"}"
+        Identifier: "{\"name\":\"alet\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":16}\"}"
       span:
         lo: 0
         hi: 16
@@ -77,12 +111,13 @@ outputs:
           span:
             lo: 4
             hi: 5
-      type_: ~
+      type_:
+        IntegerType: U8
       value:
-        Identifier: "{\"name\":\"aconst\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":14}\"}"
+        Identifier: "{\"name\":\"afor\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":16}\"}"
       span:
         lo: 0
-        hi: 14
+        hi: 16
   - Definition:
       declaration_type: Let
       variable_names:
@@ -91,205 +126,10 @@ outputs:
           span:
             lo: 4
             hi: 5
-      type_: ~
+      type_:
+        IntegerType: U8
       value:
-        Identifier: "{\"name\":\"alet\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":12}\"}"
-      span:
-        lo: 0
-        hi: 12
-  - Definition:
-      declaration_type: Let
-      variable_names:
-        - mutable: true
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
-          span:
-            lo: 4
-            hi: 5
-      type_: ~
-      value:
-        Identifier: "{\"name\":\"afor\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":12}\"}"
-      span:
-        lo: 0
-        hi: 12
-  - Definition:
-      declaration_type: Let
-      variable_names:
-        - mutable: true
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
-          span:
-            lo: 4
-            hi: 5
-      type_: ~
-      value:
-        Identifier: "{\"name\":\"aif\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":11}\"}"
-      span:
-        lo: 0
-        hi: 11
-  - Definition:
-      declaration_type: Let
-      variable_names:
-        - mutable: true
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
-          span:
-            lo: 4
-            hi: 5
-      type_: ~
-      value:
-        Identifier: "{\"name\":\"aelse\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":13}\"}"
-      span:
-        lo: 0
-        hi: 13
-  - Definition:
-      declaration_type: Let
-      variable_names:
-        - mutable: true
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
-          span:
-            lo: 4
-            hi: 5
-      type_: ~
-      value:
-        Identifier: "{\"name\":\"ai8\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":11}\"}"
-      span:
-        lo: 0
-        hi: 11
-  - Definition:
-      declaration_type: Let
-      variable_names:
-        - mutable: true
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
-          span:
-            lo: 4
-            hi: 5
-      type_: ~
-      value:
-        Identifier: "{\"name\":\"ai16\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":12}\"}"
-      span:
-        lo: 0
-        hi: 12
-  - Definition:
-      declaration_type: Let
-      variable_names:
-        - mutable: true
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
-          span:
-            lo: 4
-            hi: 5
-      type_: ~
-      value:
-        Identifier: "{\"name\":\"ai32\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":12}\"}"
-      span:
-        lo: 0
-        hi: 12
-  - Definition:
-      declaration_type: Let
-      variable_names:
-        - mutable: true
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
-          span:
-            lo: 4
-            hi: 5
-      type_: ~
-      value:
-        Identifier: "{\"name\":\"ai64\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":12}\"}"
-      span:
-        lo: 0
-        hi: 12
-  - Definition:
-      declaration_type: Let
-      variable_names:
-        - mutable: true
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
-          span:
-            lo: 4
-            hi: 5
-      type_: ~
-      value:
-        Identifier: "{\"name\":\"ai128\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":13}\"}"
-      span:
-        lo: 0
-        hi: 13
-  - Definition:
-      declaration_type: Let
-      variable_names:
-        - mutable: true
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
-          span:
-            lo: 4
-            hi: 5
-      type_: ~
-      value:
-        Identifier: "{\"name\":\"au8\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":11}\"}"
-      span:
-        lo: 0
-        hi: 11
-  - Definition:
-      declaration_type: Let
-      variable_names:
-        - mutable: true
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
-          span:
-            lo: 4
-            hi: 5
-      type_: ~
-      value:
-        Identifier: "{\"name\":\"au16\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":12}\"}"
-      span:
-        lo: 0
-        hi: 12
-  - Definition:
-      declaration_type: Let
-      variable_names:
-        - mutable: true
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
-          span:
-            lo: 4
-            hi: 5
-      type_: ~
-      value:
-        Identifier: "{\"name\":\"au32\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":12}\"}"
-      span:
-        lo: 0
-        hi: 12
-  - Definition:
-      declaration_type: Let
-      variable_names:
-        - mutable: true
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
-          span:
-            lo: 4
-            hi: 5
-      type_: ~
-      value:
-        Identifier: "{\"name\":\"au64\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":12}\"}"
-      span:
-        lo: 0
-        hi: 12
-  - Definition:
-      declaration_type: Let
-      variable_names:
-        - mutable: true
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
-          span:
-            lo: 4
-            hi: 5
-      type_: ~
-      value:
-        Identifier: "{\"name\":\"au128\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":13}\"}"
-      span:
-        lo: 0
-        hi: 13
-  - Definition:
-      declaration_type: Let
-      variable_names:
-        - mutable: true
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
-          span:
-            lo: 4
-            hi: 5
-      type_: ~
-      value:
-        Identifier: "{\"name\":\"areturn\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":15}\"}"
+        Identifier: "{\"name\":\"aif\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":15}\"}"
       span:
         lo: 0
         hi: 15
@@ -301,12 +141,13 @@ outputs:
           span:
             lo: 4
             hi: 5
-      type_: ~
+      type_:
+        IntegerType: U8
       value:
-        Identifier: "{\"name\":\"aself\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":13}\"}"
+        Identifier: "{\"name\":\"aelse\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":17}\"}"
       span:
         lo: 0
-        hi: 13
+        hi: 17
   - Definition:
       declaration_type: Let
       variable_names:
@@ -315,12 +156,13 @@ outputs:
           span:
             lo: 4
             hi: 5
-      type_: ~
+      type_:
+        IntegerType: U8
       value:
-        Identifier: "{\"name\":\"aSelf\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":13}\"}"
+        Identifier: "{\"name\":\"ai8\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":15}\"}"
       span:
         lo: 0
-        hi: 13
+        hi: 15
   - Definition:
       declaration_type: Let
       variable_names:
@@ -329,12 +171,13 @@ outputs:
           span:
             lo: 4
             hi: 5
-      type_: ~
+      type_:
+        IntegerType: U8
       value:
-        Identifier: "{\"name\":\"atrue\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":13}\"}"
+        Identifier: "{\"name\":\"ai16\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":16}\"}"
       span:
         lo: 0
-        hi: 13
+        hi: 16
   - Definition:
       declaration_type: Let
       variable_names:
@@ -343,23 +186,205 @@ outputs:
           span:
             lo: 4
             hi: 5
-      type_: ~
+      type_:
+        IntegerType: U8
       value:
-        Identifier: "{\"name\":\"afalse\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":14}\"}"
+        Identifier: "{\"name\":\"ai32\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":16}\"}"
+      span:
+        lo: 0
+        hi: 16
+  - Definition:
+      declaration_type: Let
+      variable_names:
+        - mutable: true
+          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
+          span:
+            lo: 4
+            hi: 5
+      type_:
+        IntegerType: U8
+      value:
+        Identifier: "{\"name\":\"ai64\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":16}\"}"
+      span:
+        lo: 0
+        hi: 16
+  - Definition:
+      declaration_type: Let
+      variable_names:
+        - mutable: true
+          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
+          span:
+            lo: 4
+            hi: 5
+      type_:
+        IntegerType: U8
+      value:
+        Identifier: "{\"name\":\"ai128\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":17}\"}"
+      span:
+        lo: 0
+        hi: 17
+  - Definition:
+      declaration_type: Let
+      variable_names:
+        - mutable: true
+          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
+          span:
+            lo: 4
+            hi: 5
+      type_:
+        IntegerType: U8
+      value:
+        Identifier: "{\"name\":\"au8\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":15}\"}"
+      span:
+        lo: 0
+        hi: 15
+  - Definition:
+      declaration_type: Let
+      variable_names:
+        - mutable: true
+          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
+          span:
+            lo: 4
+            hi: 5
+      type_:
+        IntegerType: U8
+      value:
+        Identifier: "{\"name\":\"au16\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":16}\"}"
+      span:
+        lo: 0
+        hi: 16
+  - Definition:
+      declaration_type: Let
+      variable_names:
+        - mutable: true
+          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
+          span:
+            lo: 4
+            hi: 5
+      type_:
+        IntegerType: U8
+      value:
+        Identifier: "{\"name\":\"au32\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":16}\"}"
+      span:
+        lo: 0
+        hi: 16
+  - Definition:
+      declaration_type: Let
+      variable_names:
+        - mutable: true
+          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
+          span:
+            lo: 4
+            hi: 5
+      type_:
+        IntegerType: U8
+      value:
+        Identifier: "{\"name\":\"au64\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":16}\"}"
+      span:
+        lo: 0
+        hi: 16
+  - Definition:
+      declaration_type: Let
+      variable_names:
+        - mutable: true
+          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
+          span:
+            lo: 4
+            hi: 5
+      type_:
+        IntegerType: U8
+      value:
+        Identifier: "{\"name\":\"au128\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":17}\"}"
+      span:
+        lo: 0
+        hi: 17
+  - Definition:
+      declaration_type: Let
+      variable_names:
+        - mutable: true
+          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
+          span:
+            lo: 4
+            hi: 5
+      type_:
+        IntegerType: U8
+      value:
+        Identifier: "{\"name\":\"areturn\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":19}\"}"
+      span:
+        lo: 0
+        hi: 19
+  - Definition:
+      declaration_type: Let
+      variable_names:
+        - mutable: true
+          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
+          span:
+            lo: 4
+            hi: 5
+      type_:
+        IntegerType: U8
+      value:
+        Identifier: "{\"name\":\"aself\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":17}\"}"
+      span:
+        lo: 0
+        hi: 17
+  - Definition:
+      declaration_type: Let
+      variable_names:
+        - mutable: true
+          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
+          span:
+            lo: 4
+            hi: 5
+      type_:
+        IntegerType: U8
+      value:
+        Identifier: "{\"name\":\"aSelf\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":17}\"}"
+      span:
+        lo: 0
+        hi: 17
+  - Definition:
+      declaration_type: Let
+      variable_names:
+        - mutable: true
+          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
+          span:
+            lo: 4
+            hi: 5
+      type_:
+        IntegerType: U8
+      value:
+        Identifier: "{\"name\":\"atrue\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":17}\"}"
+      span:
+        lo: 0
+        hi: 17
+  - Definition:
+      declaration_type: Let
+      variable_names:
+        - mutable: true
+          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
+          span:
+            lo: 4
+            hi: 5
+      type_:
+        IntegerType: U8
+      value:
+        Identifier: "{\"name\":\"afalse\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":18}\"}"
+      span:
+        lo: 0
+        hi: 18
+  - Definition:
+      declaration_type: Let
+      variable_names:
+        - mutable: true
+          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
+          span:
+            lo: 4
+            hi: 5
+      type_:
+        IntegerType: U8
+      value:
+        Identifier: "{\"name\":\"a0\",\"span\":\"{\\\"lo\\\":12,\\\"hi\\\":14}\"}"
       span:
         lo: 0
         hi: 14
-  - Definition:
-      declaration_type: Let
-      variable_names:
-        - mutable: true
-          identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
-          span:
-            lo: 4
-            hi: 5
-      type_: ~
-      value:
-        Identifier: "{\"name\":\"a0\",\"span\":\"{\\\"lo\\\":8,\\\"hi\\\":10}\"}"
-      span:
-        lo: 0
-        hi: 10

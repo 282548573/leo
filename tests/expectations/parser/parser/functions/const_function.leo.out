@@ -9,24 +9,26 @@ outputs:
         identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":17,\\\"hi\\\":18}\"}"
         input: []
         const_: true
-        output: ~
+        output:
+          IntegerType: U8
         core_mapping: ~
         block:
           statements:
             - Return:
                 expression:
                   Value:
-                    Implicit:
+                    Integer:
+                      - U8
                       - "0"
                       - span:
-                          lo: 34
-                          hi: 35
+                          lo: 40
+                          hi: 43
                 span:
-                  lo: 27
-                  hi: 35
+                  lo: 33
+                  hi: 43
           span:
-            lo: 21
-            hi: 38
+            lo: 27
+            hi: 46
         span:
           lo: 8
-          hi: 38
+          hi: 46

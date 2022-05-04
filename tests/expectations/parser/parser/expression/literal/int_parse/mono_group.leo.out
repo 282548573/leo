@@ -10,11 +10,12 @@ outputs:
               lo: 0
               hi: 8
   - Value:
-      Implicit:
-        - "123"
-        - span:
-            lo: 0
-            hi: 3
+      Group:
+        Single:
+          - "123"
+          - span:
+              lo: 0
+              hi: 8
   - Value:
       Group:
         Single:

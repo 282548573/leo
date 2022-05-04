@@ -9,11 +9,11 @@ outputs:
             lo: 0
             hi: 8
   - Value:
-      Implicit:
+      Field:
         - "123"
         - span:
             lo: 0
-            hi: 3
+            hi: 8
   - Value:
       Field:
         - "456"

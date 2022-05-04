@@ -9,7 +9,8 @@ outputs:
         identifier: "{\"name\":\"inf\",\"span\":\"{\\\"lo\\\":11,\\\"hi\\\":14}\"}"
         input: []
         const_: false
-        output: ~
+        output:
+          IntegerType: U8
         core_mapping: ~
         block:
           statements:
@@ -17,30 +18,30 @@ outputs:
                 expression:
                   Call:
                     function:
-                      Identifier: "{\"name\":\"inf\",\"span\":\"{\\\"lo\\\":23,\\\"hi\\\":26}\"}"
+                      Identifier: "{\"name\":\"inf\",\"span\":\"{\\\"lo\\\":29,\\\"hi\\\":32}\"}"
                     arguments: []
                     span:
-                      lo: 23
-                      hi: 28
+                      lo: 29
+                      hi: 34
                 span:
-                  lo: 23
-                  hi: 28
+                  lo: 29
+                  hi: 34
           span:
-            lo: 17
-            hi: 31
+            lo: 23
+            hi: 37
         span:
           lo: 2
-          hi: 31
-      "{\"name\":\"main\",\"span\":\"{\\\"lo\\\":42,\\\"hi\\\":46}\"}":
-        identifier: "{\"name\":\"main\",\"span\":\"{\\\"lo\\\":42,\\\"hi\\\":46}\"}"
+          hi: 37
+      "{\"name\":\"main\",\"span\":\"{\\\"lo\\\":48,\\\"hi\\\":52}\"}":
+        identifier: "{\"name\":\"main\",\"span\":\"{\\\"lo\\\":48,\\\"hi\\\":52}\"}"
         input:
           - Variable:
-              identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":47,\\\"hi\\\":48}\"}"
+              identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":53,\\\"hi\\\":54}\"}"
               mode: Private
               type_: Boolean
               span:
-                lo: 47
-                hi: 48
+                lo: 53
+                hi: 54
         const_: false
         output: Boolean
         core_mapping: ~
@@ -50,23 +51,23 @@ outputs:
                 expression:
                   Call:
                     function:
-                      Identifier: "{\"name\":\"inf\",\"span\":\"{\\\"lo\\\":70,\\\"hi\\\":73}\"}"
+                      Identifier: "{\"name\":\"inf\",\"span\":\"{\\\"lo\\\":76,\\\"hi\\\":79}\"}"
                     arguments: []
                     span:
-                      lo: 70
-                      hi: 75
+                      lo: 76
+                      hi: 81
                 span:
-                  lo: 70
-                  hi: 75
+                  lo: 76
+                  hi: 81
             - Return:
                 expression:
-                  Identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":88,\\\"hi\\\":89}\"}"
+                  Identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":94,\\\"hi\\\":95}\"}"
                 span:
-                  lo: 81
-                  hi: 89
+                  lo: 87
+                  hi: 95
           span:
-            lo: 64
-            hi: 92
+            lo: 70
+            hi: 98
         span:
-          lo: 33
-          hi: 92
+          lo: 39
+          hi: 98

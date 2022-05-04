@@ -5,68 +5,40 @@ outputs:
   - Binary:
       left:
         Value:
-          Implicit:
+          Integer:
+            - U8
             - "1"
             - span:
                 lo: 0
-                hi: 1
+                hi: 3
       right:
         Value:
-          Implicit:
+          Integer:
+            - U8
             - "1"
             - span:
-                lo: 4
-                hi: 5
+                lo: 6
+                hi: 9
       op: Sub
       span:
         lo: 0
-        hi: 5
+        hi: 9
   - Binary:
       left:
         Value:
-          Implicit:
+          Integer:
+            - U16
             - "2"
             - span:
                 lo: 0
-                hi: 1
+                hi: 4
       right:
         Value:
-          Implicit:
+          Integer:
+            - U64
             - "3"
             - span:
-                lo: 2
-                hi: 3
-      op: Sub
-      span:
-        lo: 0
-        hi: 3
-  - Binary:
-      left:
-        Binary:
-          left:
-            Value:
-              Implicit:
-                - "1"
-                - span:
-                    lo: 0
-                    hi: 1
-          right:
-            Value:
-              Implicit:
-                - "2"
-                - span:
-                    lo: 4
-                    hi: 5
-          op: Sub
-          span:
-            lo: 0
-            hi: 5
-      right:
-        Value:
-          Implicit:
-            - "3"
-            - span:
-                lo: 8
+                lo: 5
                 hi: 9
       op: Sub
       span:
@@ -77,43 +49,82 @@ outputs:
         Binary:
           left:
             Value:
-              Implicit:
+              Integer:
+                - U32
                 - "1"
                 - span:
                     lo: 0
-                    hi: 1
+                    hi: 4
           right:
             Value:
-              Implicit:
+              Integer:
+                - U32
                 - "2"
                 - span:
-                    lo: 4
-                    hi: 5
+                    lo: 7
+                    hi: 11
+          op: Sub
+          span:
+            lo: 0
+            hi: 11
+      right:
+        Value:
+          Integer:
+            - U32
+            - "3"
+            - span:
+                lo: 14
+                hi: 18
+      op: Sub
+      span:
+        lo: 0
+        hi: 18
+  - Binary:
+      left:
+        Binary:
+          left:
+            Value:
+              Integer:
+                - U8
+                - "1"
+                - span:
+                    lo: 0
+                    hi: 3
+          right:
+            Value:
+              Integer:
+                - U16
+                - "2"
+                - span:
+                    lo: 6
+                    hi: 10
           op: Mul
           span:
             lo: 0
-            hi: 5
+            hi: 10
       right:
         Binary:
           left:
             Value:
-              Implicit:
+              Integer:
+                - U32
                 - "3"
                 - span:
-                    lo: 8
-                    hi: 9
+                    lo: 13
+                    hi: 17
           right:
             Value:
-              Implicit:
+              Integer:
+                - I64
                 - "4"
                 - span:
-                    lo: 12
-                    hi: 13
+                    lo: 20
+                    hi: 24
           op: Mul
           span:
-            lo: 8
-            hi: 13
+            lo: 13
+            hi: 24
       op: Sub
       span:
         lo: 0
-        hi: 13
+        hi: 24

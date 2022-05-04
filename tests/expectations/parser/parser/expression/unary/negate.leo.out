@@ -51,18 +51,6 @@ outputs:
   - Unary:
       inner:
         Value:
-          Implicit:
-            - "5"
-            - span:
-                lo: 1
-                hi: 2
-      op: Negate
-      span:
-        lo: 0
-        hi: 2
-  - Unary:
-      inner:
-        Value:
           Integer:
             - I8
             - "5"

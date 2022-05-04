@@ -10,21 +10,22 @@ outputs:
           - Return:
               expression:
                 Value:
-                  Implicit:
+                  Integer:
+                    - U8
                     - "0"
                     - span:
                         lo: 14
-                        hi: 15
+                        hi: 17
               span:
                 lo: 7
-                hi: 15
+                hi: 17
         span:
           lo: 5
-          hi: 18
+          hi: 20
       next: ~
       span:
         lo: 0
-        hi: 18
+        hi: 20
   - Conditional:
       condition:
         Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
@@ -33,21 +34,22 @@ outputs:
           - Return:
               expression:
                 Value:
-                  Implicit:
+                  Integer:
+                    - U8
                     - "0"
                     - span:
                         lo: 16
-                        hi: 17
+                        hi: 19
               span:
                 lo: 9
-                hi: 17
+                hi: 19
         span:
           lo: 7
-          hi: 20
+          hi: 22
       next: ~
       span:
         lo: 0
-        hi: 20
+        hi: 22
   - Conditional:
       condition:
         Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":4,\\\"hi\\\":5}\"}"
@@ -132,18 +134,19 @@ outputs:
           - Return:
               expression:
                 Value:
-                  Implicit:
+                  Integer:
+                    - U8
                     - "0"
                     - span:
                         lo: 22
-                        hi: 23
+                        hi: 25
               span:
                 lo: 15
-                hi: 23
+                hi: 25
         span:
           lo: 7
-          hi: 26
+          hi: 28
       next: ~
       span:
         lo: 0
-        hi: 26
+        hi: 28

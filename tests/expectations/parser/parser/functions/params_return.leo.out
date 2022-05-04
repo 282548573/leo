@@ -33,17 +33,18 @@ outputs:
             - Return:
                 expression:
                   Value:
-                    Implicit:
+                    Integer:
+                      - U8
                       - "0"
                       - span:
                           lo: 49
-                          hi: 50
+                          hi: 52
                 span:
                   lo: 42
-                  hi: 50
+                  hi: 52
           span:
             lo: 36
-            hi: 53
+            hi: 55
         span:
           lo: 2
-          hi: 53
+          hi: 55

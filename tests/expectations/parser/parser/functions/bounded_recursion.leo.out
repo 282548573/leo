@@ -17,7 +17,8 @@ outputs:
                 lo: 22
                 hi: 23
         const_: false
-        output: ~
+        output:
+          IntegerType: U8
         core_mapping: ~
         block:
           statements:
@@ -25,70 +26,71 @@ outputs:
                 condition:
                   Binary:
                     left:
-                      Identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":39,\\\"hi\\\":40}\"}"
+                      Identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":45,\\\"hi\\\":46}\"}"
                     right:
                       Value:
                         Integer:
                           - U32
                           - "5"
                           - span:
-                              lo: 43
-                              hi: 47
+                              lo: 49
+                              hi: 53
                     op: Lt
                     span:
-                      lo: 39
-                      hi: 47
+                      lo: 45
+                      hi: 53
                 block:
                   statements:
                     - Expression:
                         expression:
                           Call:
                             function:
-                              Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":58,\\\"hi\\\":59}\"}"
+                              Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":64,\\\"hi\\\":65}\"}"
                             arguments:
                               - Binary:
                                   left:
-                                    Identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":60,\\\"hi\\\":61}\"}"
+                                    Identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":66,\\\"hi\\\":67}\"}"
                                   right:
                                     Value:
-                                      Implicit:
+                                      Integer:
+                                        - U32
                                         - "1"
                                         - span:
-                                            lo: 62
-                                            hi: 63
+                                            lo: 68
+                                            hi: 72
                                   op: Add
                                   span:
-                                    lo: 60
-                                    hi: 63
+                                    lo: 66
+                                    hi: 72
                             span:
-                              lo: 58
-                              hi: 64
+                              lo: 64
+                              hi: 73
                         span:
-                          lo: 58
-                          hi: 64
+                          lo: 64
+                          hi: 73
                   span:
-                    lo: 48
-                    hi: 71
+                    lo: 54
+                    hi: 80
                 next: ~
                 span:
-                  lo: 36
-                  hi: 71
+                  lo: 42
+                  hi: 80
           span:
-            lo: 30
-            hi: 73
+            lo: 36
+            hi: 82
         span:
           lo: 2
-          hi: 73
-      "{\"name\":\"main\",\"span\":\"{\\\"lo\\\":84,\\\"hi\\\":88}\"}":
-        identifier: "{\"name\":\"main\",\"span\":\"{\\\"lo\\\":84,\\\"hi\\\":88}\"}"
+          hi: 82
+      "{\"name\":\"main\",\"span\":\"{\\\"lo\\\":93,\\\"hi\\\":97}\"}":
+        identifier: "{\"name\":\"main\",\"span\":\"{\\\"lo\\\":93,\\\"hi\\\":97}\"}"
         input:
           - Variable:
-              identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":89,\\\"hi\\\":90}\"}"
+              identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":98,\\\"hi\\\":99}\"}"
               mode: Private
               type_: Boolean
               span:
-                lo: 89
-                hi: 90
+                lo: 98
+                hi: 99
         const_: false
         output: Boolean
         core_mapping: ~
@@ -98,30 +100,30 @@ outputs:
                 expression:
                   Call:
                     function:
-                      Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":112,\\\"hi\\\":113}\"}"
+                      Identifier: "{\"name\":\"x\",\"span\":\"{\\\"lo\\\":121,\\\"hi\\\":122}\"}"
                     arguments:
                       - Value:
                           Integer:
                             - U32
                             - "1"
                             - span:
-                                lo: 114
-                                hi: 118
+                                lo: 123
+                                hi: 127
                     span:
-                      lo: 112
-                      hi: 119
+                      lo: 121
+                      hi: 128
                 span:
-                  lo: 112
-                  hi: 119
+                  lo: 121
+                  hi: 128
             - Return:
                 expression:
-                  Identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":132,\\\"hi\\\":133}\"}"
+                  Identifier: "{\"name\":\"y\",\"span\":\"{\\\"lo\\\":141,\\\"hi\\\":142}\"}"
                 span:
-                  lo: 125
-                  hi: 133
+                  lo: 134
+                  hi: 142
           span:
-            lo: 106
-            hi: 136
+            lo: 115
+            hi: 145
         span:
-          lo: 75
-          hi: 136
+          lo: 84
+          hi: 145

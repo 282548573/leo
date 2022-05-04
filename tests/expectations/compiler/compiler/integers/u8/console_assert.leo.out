@@ -2,5 +2,7 @@
 namespace: Compile
 expectation: Pass
 outputs:
-  - output: []
-    initial_ast: c552462a03160d9e1ba8cabb15735900732bcd658c35e7b78dfe0e5933f2e996
+  - output:
+      - initial_input_ast: 48971cb0014a813c10f25796c99546258f3aa166111c25fb8c8fa1b6c0bf8cf8
+        symbol_table: 8aca3b9422a6097b27e54c6d205754032eb01b325bf5febc689cb0a1dfd9c93c
+    initial_ast: 482941cf1ff5b403fa53efc898148dc0213f53ae8e22051dc482291ca8c1186e

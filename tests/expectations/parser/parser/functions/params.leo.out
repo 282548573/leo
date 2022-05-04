@@ -25,24 +25,26 @@ outputs:
                 lo: 21
                 hi: 22
         const_: false
-        output: ~
+        output:
+          IntegerType: U8
         core_mapping: ~
         block:
           statements:
             - Return:
                 expression:
                   Value:
-                    Implicit:
+                    Integer:
+                      - U8
                       - "0"
                       - span:
-                          lo: 42
-                          hi: 43
+                          lo: 48
+                          hi: 51
                 span:
-                  lo: 35
-                  hi: 43
+                  lo: 41
+                  hi: 51
           span:
-            lo: 29
-            hi: 46
+            lo: 35
+            hi: 54
         span:
           lo: 2
-          hi: 46
+          hi: 54
