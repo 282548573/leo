@@ -39,3 +39,13 @@ version = "1.5.3"
 [dependencies.leo-span]
 path = "../../leo/span"
 version = "1.5.3"
+
+[dependencies.snarkvm-bytecode]
+# git = "https://github.com/AleoHQ/snarkVM.git"
+# rev = "2f7f38e"
+path = "E:\\Work\\Aleo\\leo_repos\\snarkVM\\bytecode"
+
+[dependencies.snarkvm-circuits]
+# git = "https://github.com/AleoHQ/snarkVM.git"
+# rev = "2f7f38e"
+path = "E:\\Work\\Aleo\\leo_repos\\snarkVM\\circuits"

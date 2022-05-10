@@ -105,7 +105,7 @@ impl<'a> Compiler<'a> {
     pub fn parse_input_from_string(&mut self, input_file_path: PathBuf, input_string: &str) -> Result<()> {
         let input_ast =
             leo_parser::parse_input(self.handler, input_file_path.to_str().unwrap_or_default(), input_string)?;
-        input_ast.to_json_file_without_keys(self.output_directory.clone(), "inital_input_ast.json", &["span"])?;
+        input_ast.to_json_file_without_keys(self.output_directory.clone(), "initial_input_ast.json", &["span"])?;
 
         self.input_ast = Some(input_ast);
         Ok(())

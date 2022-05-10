@@ -27,10 +27,13 @@ pub use canonicalization::*;
 pub use import_resolution::*; */
 
 pub mod pass;
-pub use self::pass::*;
+pub use pass::*;
 
 pub mod symbol_table;
 pub use symbol_table::*;
 
 pub mod type_checker;
 pub use type_checker::*;
+
+pub mod ir_emitter;
+pub use ir_emitter::*;
